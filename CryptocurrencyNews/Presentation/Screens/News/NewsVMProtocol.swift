@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol NewsVMProtocol {
+    var numberOfRows: Int { get }
+}

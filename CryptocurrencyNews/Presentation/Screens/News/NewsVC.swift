@@ -6,4 +6,41 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class NewsVC: UIViewController {
+    
+    private var mainView: NewsView { return view as! NewsView }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
+    }
+}
+
+extension NewsVC: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfRows
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        
+        
+        return cell
+    }
+}
+
+extension NewsVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension NewsVC: StoryboardCompatible {
+    typealias T = NewsVMProtocol
+}

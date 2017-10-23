@@ -1,5 +1,5 @@
 //
-//  NewsView.swift
+//  NewsCell.swift
 //  CryptocurrencyNews
 //
 //  Created by Kristijan Delivuk on 23/10/2017.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class NewsView: UIView {
+class NewsCell: UITableViewCell {
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leftTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        leftTitleLabel.text = ""
     }
 }
