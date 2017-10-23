@@ -10,6 +10,7 @@
 		650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650120E21F9DCA1200537214 /* AppDelegate.swift */; };
 		650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650120E91F9DCA1200537214 /* Assets.xcassets */; };
 		650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650120EB1F9DCA1200537214 /* LaunchScreen.storyboard */; };
+		B38072ADA15D7A4A7C29FB77 /* Pods_CryptocurrencyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,9 @@
 		650120E91F9DCA1200537214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		650120EC1F9DCA1200537214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650120EE1F9DCA1200537214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.release.xcconfig"; sourceTree = "<group>"; };
+		C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38072ADA15D7A4A7C29FB77 /* Pods_CryptocurrencyNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +41,8 @@
 			children = (
 				650120E11F9DCA1200537214 /* CryptocurrencyNews */,
 				650120E01F9DCA1200537214 /* Products */,
+				965376DD7F2C367537D9FEA6 /* Pods */,
+				A1951FE77E4D2CABE89FC668 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +65,23 @@
 			path = CryptocurrencyNews;
 			sourceTree = "<group>";
 		};
+		965376DD7F2C367537D9FEA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */,
+				73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A1951FE77E4D2CABE89FC668 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +89,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 650120F11F9DCA1200537214 /* Build configuration list for PBXNativeTarget "CryptocurrencyNews" */;
 			buildPhases = (
+				DE144322276D874AA9F54D67 /* [CP] Check Pods Manifest.lock */,
 				650120DB1F9DCA1200537214 /* Sources */,
 				650120DC1F9DCA1200537214 /* Frameworks */,
 				650120DD1F9DCA1200537214 /* Resources */,
+				F933D39AF8110FCA37B0CC50 /* [CP] Embed Pods Frameworks */,
+				34F57615E712677F97133D9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,6 +150,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34F57615E712677F97133D9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE144322276D874AA9F54D67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F933D39AF8110FCA37B0CC50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		650120DB1F9DCA1200537214 /* Sources */ = {
@@ -256,6 +343,7 @@
 		};
 		650120F21F9DCA1200537214 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -270,6 +358,7 @@
 		};
 		650120F31F9DCA1200537214 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
