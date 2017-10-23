@@ -12,6 +12,8 @@
 		650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650120EB1F9DCA1200537214 /* LaunchScreen.storyboard */; };
 		654A7AD91F9DDD4E00F27A1D /* InformationVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A7AD81F9DDD4E00F27A1D /* InformationVC.storyboard */; };
 		654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */; };
+		654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */; };
+		654A7AE21F9E05FA00F27A1D /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A7AE11F9E05FA00F27A1D /* NewsCell.xib */; };
 		655A751D1F9DDAF70011C2BE /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A751C1F9DDAF70011C2BE /* InformationVC.swift */; };
 		655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A751E1F9DDB170011C2BE /* InformationVM.swift */; };
 		655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */; };
@@ -35,6 +37,8 @@
 		650120EE1F9DCA1200537214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654A7AD81F9DDD4E00F27A1D /* InformationVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationVC.storyboard; sourceTree = "<group>"; };
 		654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardComplatible.swift; sourceTree = "<group>"; };
+		654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		654A7AE11F9E05FA00F27A1D /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		655A751C1F9DDAF70011C2BE /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
 		655A751E1F9DDB170011C2BE /* InformationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVM.swift; sourceTree = "<group>"; };
 		655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVMProtocol.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 				650120EE1F9DCA1200537214 /* Info.plist */,
 			);
 			path = CryptocurrencyNews;
+			sourceTree = "<group>";
+		};
+		654A7ADE1F9E05DB00F27A1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */,
+				654A7AE11F9E05FA00F27A1D /* NewsCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		655A751B1F9DDAD50011C2BE /* Information */ = {
@@ -162,6 +175,7 @@
 		65C61B501F9DD98E002F87F6 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				654A7ADE1F9E05DB00F27A1D /* Views */,
 				65C61B511F9DD99B002F87F6 /* NewsVC.swift */,
 				65C61B531F9DD9AA002F87F6 /* NewsVM.swift */,
 				65C61B551F9DD9B7002F87F6 /* NewsVMProtocol.swift */,
@@ -252,6 +266,7 @@
 			files = (
 				650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */,
 				65C61B5A1F9DD9DF002F87F6 /* NewsVC.storyboard in Resources */,
+				654A7AE21F9E05FA00F27A1D /* NewsCell.xib in Resources */,
 				654A7AD91F9DDD4E00F27A1D /* InformationVC.storyboard in Resources */,
 				650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */,
 			);
@@ -334,6 +349,7 @@
 				65C61B4A1F9DCF1B002F87F6 /* Colors.swift in Sources */,
 				65C61B481F9DCF10002F87F6 /* Images.swift in Sources */,
 				655A75231F9DDB3E0011C2BE /* InformationView.swift in Sources */,
+				654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */,
 				654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */,
 				65C61B521F9DD99B002F87F6 /* NewsVC.swift in Sources */,
 				65C61B541F9DD9AA002F87F6 /* NewsVM.swift in Sources */,
