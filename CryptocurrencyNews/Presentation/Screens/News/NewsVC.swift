@@ -20,7 +20,9 @@ class NewsVC: UIViewController {
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
         
-        mainView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        mainView.tableView.rowHeight = 60
+        
+        mainView.tableView.register(NewsCell.self)
     }
 }
 
@@ -31,10 +33,10 @@ extension NewsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeue(for: indexPath, type: NewsCell.self)
         let currency = viewModel.item(for: indexPath)
         
-        cell.textLabel?.text = currency.name
+        cell.leftTitleLabel.text = currency.name
         
         return cell
     }

@@ -6,4 +6,9 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct Color {
+    static let black = UIColor.black
+    static let white = UIColor.white
+}
