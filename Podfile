@@ -8,7 +8,14 @@ target 'CryptocurrencyNews' do
   # Pods for CryptocurrencyNews
   pod 'Alamofire'
   pod 'SnapKit'
-  pod 'RxSwift', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift4.0-swift4.0'
-  pod 'RxCocoa', :git => 'https://github.com/ReactiveX/RxSwift.git', :branch => 'rxswift4.0-swift4.0'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  target 'API' do
+      use_frameworks!
+      
+      pod 'Alamofire'
+      pod 'RxSwift'
+  end
+  
 end
