@@ -6,4 +6,11 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class InformationView: UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}

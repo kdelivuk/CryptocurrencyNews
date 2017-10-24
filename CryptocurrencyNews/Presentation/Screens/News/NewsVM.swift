@@ -8,12 +8,21 @@
 
 import Foundation
 
-class NewsVM: NewsVMProtocol {
+final class NewsVM: NewsVMProtocol {
 
     var numberOfRows: Int
-    
+
+    // MARK: - Class Lifecycle
     
     init() {
         numberOfRows = 0
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+    
+    }
+    
+    func item(for indexPath: IndexPath) -> Currency {
+        return Currency(name: "")
     }
 }

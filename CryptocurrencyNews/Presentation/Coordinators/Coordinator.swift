@@ -10,14 +10,14 @@ import UIKit
 
 class Coordinator: NSObject {
     
-    let rootViewController: UIViewController
+    let rootNavigationController: UINavigationController
     
     var shouldEnd: (() -> Void)?
     
     private(set) var coordinators = [Coordinator]()
     
-    init(rootViewController: UIViewController) {
-        self.rootViewController = rootViewController
+    init(rootNavigationController: UINavigationController) {
+        self.rootNavigationController = rootNavigationController
         self.coordinators = []
     }
     
