@@ -33,6 +33,8 @@
 		65DD0F501F9F257F00CC665A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F4F1F9F257F00CC665A /* Router.swift */; };
 		65DD0F561F9F25C900CC665A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F551F9F25C900CC665A /* APIError.swift */; };
 		65DD0F581F9F25D200CC665A /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F571F9F25D200CC665A /* APIResult.swift */; };
+		65DD0F5A1F9F2A8F00CC665A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F591F9F2A8F00CC665A /* MainCoordinator.swift */; };
+		65DD0F5C1F9F306F00CC665A /* NewsVMMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F5B1F9F306F00CC665A /* NewsVMMock.swift */; };
 		B38072ADA15D7A4A7C29FB77 /* Pods_CryptocurrencyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */; };
 		F397BCBEDD25CAB8CA980308 /* Pods_CryptocurrencyNews_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C971519F8FE212BC10DB662D /* Pods_CryptocurrencyNews_API.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +94,8 @@
 		65DD0F4F1F9F257F00CC665A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		65DD0F551F9F25C900CC665A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		65DD0F571F9F25D200CC665A /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		65DD0F591F9F2A8F00CC665A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		65DD0F5B1F9F306F00CC665A /* NewsVMMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVMMock.swift; sourceTree = "<group>"; };
 		73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.release.xcconfig"; sourceTree = "<group>"; };
 		C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C971519F8FE212BC10DB662D /* Pods_CryptocurrencyNews_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				65C61B4D1F9DCF6F002F87F6 /* Coordinator.swift */,
+				65DD0F591F9F2A8F00CC665A /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				654A7ADE1F9E05DB00F27A1D /* Views */,
 				65C61B511F9DD99B002F87F6 /* NewsVC.swift */,
 				65C61B531F9DD9AA002F87F6 /* NewsVM.swift */,
+				65DD0F5B1F9F306F00CC665A /* NewsVMMock.swift */,
 				65C61B551F9DD9B7002F87F6 /* NewsVMProtocol.swift */,
 				65C61B571F9DD9D4002F87F6 /* NewsView.swift */,
 				65C61B591F9DD9DF002F87F6 /* NewsVC.storyboard */,
@@ -508,6 +514,7 @@
 				65C61B581F9DD9D4002F87F6 /* NewsView.swift in Sources */,
 				65C61B4E1F9DCF6F002F87F6 /* Coordinator.swift in Sources */,
 				655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */,
+				65DD0F5C1F9F306F00CC665A /* NewsVMMock.swift in Sources */,
 				650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */,
 				655A751D1F9DDAF70011C2BE /* InformationVC.swift in Sources */,
 				65C61B4A1F9DCF1B002F87F6 /* Colors.swift in Sources */,
@@ -516,6 +523,7 @@
 				654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */,
 				654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */,
 				65C61B521F9DD99B002F87F6 /* NewsVC.swift in Sources */,
+				65DD0F5A1F9F2A8F00CC665A /* MainCoordinator.swift in Sources */,
 				65C61B541F9DD9AA002F87F6 /* NewsVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +675,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UL4L5EFF2;
 				INFOPLIST_FILE = CryptocurrencyNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.CryptocurrencyNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,7 +693,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6UL4L5EFF2;
 				INFOPLIST_FILE = CryptocurrencyNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = delivuk.kristijan.CryptocurrencyNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";

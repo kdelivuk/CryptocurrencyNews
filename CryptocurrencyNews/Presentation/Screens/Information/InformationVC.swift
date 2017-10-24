@@ -6,4 +6,19 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class InformationVC: UIViewController {
+    
+    private var mainView: InformationView { return view as! InformationView }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
+}
+
+
+extension InformationVC: StoryboardCompatible {
+    typealias T = InformationVMProtocol
+}

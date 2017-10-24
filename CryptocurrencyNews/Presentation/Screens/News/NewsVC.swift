@@ -15,8 +15,12 @@ class NewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        edgesForExtendedLayout = []
+        
         mainView.tableView.dataSource = self
         mainView.tableView.delegate = self
+        
+        mainView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
     }
 }
 
@@ -28,7 +32,9 @@ extension NewsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let currency = viewModel.item(for: indexPath)
         
+        cell.textLabel?.text = currency.name
         
         return cell
     }
@@ -38,6 +44,7 @@ extension NewsVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        viewModel.didSelectItem(at: indexPath)
     }
 }
 
