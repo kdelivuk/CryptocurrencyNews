@@ -10,6 +10,7 @@
 		650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650120E21F9DCA1200537214 /* AppDelegate.swift */; };
 		650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650120E91F9DCA1200537214 /* Assets.xcassets */; };
 		650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650120EB1F9DCA1200537214 /* LaunchScreen.storyboard */; };
+		652B2E671FA277A300E6CE28 /* TableViewEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652B2E661FA277A300E6CE28 /* TableViewEmptyStateView.swift */; };
 		654A7AD91F9DDD4E00F27A1D /* InformationVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A7AD81F9DDD4E00F27A1D /* InformationVC.storyboard */; };
 		654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */; };
 		654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */; };
@@ -18,6 +19,8 @@
 		655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A751E1F9DDB170011C2BE /* InformationVM.swift */; };
 		655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */; };
 		655A75231F9DDB3E0011C2BE /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A75221F9DDB3E0011C2BE /* InformationView.swift */; };
+		6584D8051FA1C73E00FA0E46 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */; };
+		6584D8071FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */; };
 		65BEF9911F9F730C005B6389 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9901F9F730C005B6389 /* UIColor+Extension.swift */; };
 		65BEF9931F9F73C6005B6389 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */; };
 		65BEF9951F9F7408005B6389 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9941F9F7408005B6389 /* ReusableView.swift */; };
@@ -84,6 +87,7 @@
 		650120E91F9DCA1200537214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		650120EC1F9DCA1200537214 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650120EE1F9DCA1200537214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		652B2E661FA277A300E6CE28 /* TableViewEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewEmptyStateView.swift; sourceTree = "<group>"; };
 		654A7AD81F9DDD4E00F27A1D /* InformationVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InformationVC.storyboard; sourceTree = "<group>"; };
 		654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardComplatible.swift; sourceTree = "<group>"; };
 		654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		655A751E1F9DDB170011C2BE /* InformationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVM.swift; sourceTree = "<group>"; };
 		655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVMProtocol.swift; sourceTree = "<group>"; };
 		655A75221F9DDB3E0011C2BE /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
+		6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenLoaderVC.swift; sourceTree = "<group>"; };
 		65BEF9901F9F730C005B6389 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		65BEF9941F9F7408005B6389 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			children = (
 				654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */,
 				654A7AE11F9E05FA00F27A1D /* NewsCell.xib */,
+				652B2E661FA277A300E6CE28 /* TableViewEmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */,
 				65BEF99C1FA07CB4005B6389 /* NSObject+Extension.swift */,
 				65BEF99E1FA07D68005B6389 /* UIViewController+Extension.swift */,
+				6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 				654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */,
 				65BEF9941F9F7408005B6389 /* ReusableView.swift */,
 				65BEF9961F9F7413005B6389 /* NibLoadableView.swift */,
+				6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -561,6 +570,7 @@
 				65C61B561F9DD9B7002F87F6 /* NewsVMProtocol.swift in Sources */,
 				655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */,
 				65C61B581F9DD9D4002F87F6 /* NewsView.swift in Sources */,
+				6584D8071FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift in Sources */,
 				65BEF99D1FA07CB4005B6389 /* NSObject+Extension.swift in Sources */,
 				65C61B4E1F9DCF6F002F87F6 /* Coordinator.swift in Sources */,
 				65BEF9911F9F730C005B6389 /* UIColor+Extension.swift in Sources */,
@@ -583,6 +593,8 @@
 				65BEF9971F9F7413005B6389 /* NibLoadableView.swift in Sources */,
 				65C61B521F9DD99B002F87F6 /* NewsVC.swift in Sources */,
 				65BEF99B1FA07C7B005B6389 /* SettingsCoordinator.swift in Sources */,
+				652B2E671FA277A300E6CE28 /* TableViewEmptyStateView.swift in Sources */,
+				6584D8051FA1C73E00FA0E46 /* UISearchBar+Extension.swift in Sources */,
 				65DD0F5A1F9F2A8F00CC665A /* MainCoordinator.swift in Sources */,
 				65C61B541F9DD9AA002F87F6 /* NewsVM.swift in Sources */,
 			);

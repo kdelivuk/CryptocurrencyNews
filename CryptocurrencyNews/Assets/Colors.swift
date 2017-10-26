@@ -11,4 +11,5 @@ import UIKit
 struct Color {
     static let black = UIColor.black
     static let white = UIColor.white
+    static let clear = UIColor.clear
 }
