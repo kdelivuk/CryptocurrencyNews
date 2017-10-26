@@ -6,18 +6,31 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import RxSwift
 
 final class NewsVM: NewsVMProtocol {
+    func search(word: String) {
+        
+    }
+    
+    
+    var disposeBag: DisposeBag
+    var stateObservable: Observable<NewsVMState>
+    
 
     var numberOfRows: Int
 
     // MARK: - Class Lifecycle
     
     init() {
+        disposeBag = DisposeBag()
+        stateObservable = Observable.empty()
         numberOfRows = 0
     }
     
+    func clear() {
+        
+    }
     func didSelectItem(at indexPath: IndexPath) {
     
     }

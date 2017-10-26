@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+            timestampString = "530742251.436961"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+            timestampString = "530742251.437108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+            timestampString = "530742251.437178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CryptocurrencyNews.NewsVMState) -&gt; () in CryptocurrencyNews.NewsVC.(bindViewModel in _EB06E6EFDE3A07DDEB02437AAA6A4FC8)() -&gt; ()"
+                  moduleName = "CryptocurrencyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristijandelivuk/Desktop/DECODE/CryptocurrencyNews/CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+                  timestampString = "530742114.304141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "1475">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SnapKit.ConstraintMaker) -&gt; () in closure #1 (CryptocurrencyNews.NewsVMState) -&gt; () in CryptocurrencyNews.NewsVC.(bindViewModel in _EB06E6EFDE3A07DDEB02437AAA6A4FC8)() -&gt; ()"
+                  moduleName = "CryptocurrencyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristijandelivuk/Desktop/DECODE/CryptocurrencyNews/CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+                  timestampString = "530742114.306106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
