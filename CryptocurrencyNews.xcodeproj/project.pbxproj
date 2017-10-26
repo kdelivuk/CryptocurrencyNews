@@ -22,6 +22,15 @@
 		65BEF9931F9F73C6005B6389 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */; };
 		65BEF9951F9F7408005B6389 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9941F9F7408005B6389 /* ReusableView.swift */; };
 		65BEF9971F9F7413005B6389 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9961F9F7413005B6389 /* NibLoadableView.swift */; };
+		65BEF9991FA07C6E005B6389 /* CryptocurrencyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9981FA07C6E005B6389 /* CryptocurrencyCoordinator.swift */; };
+		65BEF99B1FA07C7B005B6389 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF99A1FA07C7B005B6389 /* SettingsCoordinator.swift */; };
+		65BEF99D1FA07CB4005B6389 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF99C1FA07CB4005B6389 /* NSObject+Extension.swift */; };
+		65BEF99F1FA07D68005B6389 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF99E1FA07D68005B6389 /* UIViewController+Extension.swift */; };
+		65BEF9A31FA07F03005B6389 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9A21FA07F03005B6389 /* SettingsVC.swift */; };
+		65BEF9A51FA07F0A005B6389 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9A41FA07F0A005B6389 /* SettingsVM.swift */; };
+		65BEF9A71FA07F11005B6389 /* SettingsVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9A61FA07F11005B6389 /* SettingsVMProtocol.swift */; };
+		65BEF9A91FA07F19005B6389 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9A81FA07F19005B6389 /* SettingsView.swift */; };
+		65BEF9AB1FA07F23005B6389 /* SettingsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BEF9AA1FA07F23005B6389 /* SettingsVC.storyboard */; };
 		65C61B481F9DCF10002F87F6 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C61B471F9DCF10002F87F6 /* Images.swift */; };
 		65C61B4A1F9DCF1B002F87F6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C61B491F9DCF1B002F87F6 /* Colors.swift */; };
 		65C61B4E1F9DCF6F002F87F6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C61B4D1F9DCF6F002F87F6 /* Coordinator.swift */; };
@@ -87,6 +96,15 @@
 		65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		65BEF9941F9F7408005B6389 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		65BEF9961F9F7413005B6389 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		65BEF9981FA07C6E005B6389 /* CryptocurrencyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyCoordinator.swift; sourceTree = "<group>"; };
+		65BEF99A1FA07C7B005B6389 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		65BEF99C1FA07CB4005B6389 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		65BEF99E1FA07D68005B6389 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		65BEF9A21FA07F03005B6389 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		65BEF9A41FA07F0A005B6389 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
+		65BEF9A61FA07F11005B6389 /* SettingsVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVMProtocol.swift; sourceTree = "<group>"; };
+		65BEF9A81FA07F19005B6389 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		65BEF9AA1FA07F23005B6389 /* SettingsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsVC.storyboard; sourceTree = "<group>"; };
 		65C61B471F9DCF10002F87F6 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		65C61B491F9DCF1B002F87F6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		65C61B4D1F9DCF6F002F87F6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -187,6 +205,18 @@
 			path = Information;
 			sourceTree = "<group>";
 		};
+		65BEF9A11FA07EFB005B6389 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				65BEF9A21FA07F03005B6389 /* SettingsVC.swift */,
+				65BEF9A41FA07F0A005B6389 /* SettingsVM.swift */,
+				65BEF9A61FA07F11005B6389 /* SettingsVMProtocol.swift */,
+				65BEF9A81FA07F19005B6389 /* SettingsView.swift */,
+				65BEF9AA1FA07F23005B6389 /* SettingsVC.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		65C61B411F9DCDF5002F87F6 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +240,8 @@
 			children = (
 				65BEF9901F9F730C005B6389 /* UIColor+Extension.swift */,
 				65BEF9921F9F73C5005B6389 /* UITableView+Extension.swift */,
+				65BEF99C1FA07CB4005B6389 /* NSObject+Extension.swift */,
+				65BEF99E1FA07D68005B6389 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +251,8 @@
 			children = (
 				65C61B4D1F9DCF6F002F87F6 /* Coordinator.swift */,
 				65DD0F591F9F2A8F00CC665A /* MainCoordinator.swift */,
+				65BEF9981FA07C6E005B6389 /* CryptocurrencyCoordinator.swift */,
+				65BEF99A1FA07C7B005B6389 /* SettingsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -236,6 +270,7 @@
 		65C61B4F1F9DD989002F87F6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				65BEF9A11FA07EFB005B6389 /* Settings */,
 				655A751B1F9DDAD50011C2BE /* Information */,
 				65C61B501F9DD98E002F87F6 /* News */,
 			);
@@ -410,6 +445,7 @@
 				65C61B5A1F9DD9DF002F87F6 /* NewsVC.storyboard in Resources */,
 				654A7AE21F9E05FA00F27A1D /* NewsCell.xib in Resources */,
 				654A7AD91F9DDD4E00F27A1D /* InformationVC.storyboard in Resources */,
+				65BEF9AB1FA07F23005B6389 /* SettingsVC.storyboard in Resources */,
 				650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,14 +557,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BEF99F1FA07D68005B6389 /* UIViewController+Extension.swift in Sources */,
 				65C61B561F9DD9B7002F87F6 /* NewsVMProtocol.swift in Sources */,
 				655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */,
 				65C61B581F9DD9D4002F87F6 /* NewsView.swift in Sources */,
+				65BEF99D1FA07CB4005B6389 /* NSObject+Extension.swift in Sources */,
 				65C61B4E1F9DCF6F002F87F6 /* Coordinator.swift in Sources */,
 				65BEF9911F9F730C005B6389 /* UIColor+Extension.swift in Sources */,
 				655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */,
 				65DD0F5C1F9F306F00CC665A /* NewsVMMock.swift in Sources */,
+				65BEF9A31FA07F03005B6389 /* SettingsVC.swift in Sources */,
 				650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */,
+				65BEF9A51FA07F0A005B6389 /* SettingsVM.swift in Sources */,
+				65BEF9A71FA07F11005B6389 /* SettingsVMProtocol.swift in Sources */,
 				655A751D1F9DDAF70011C2BE /* InformationVC.swift in Sources */,
 				65C61B4A1F9DCF1B002F87F6 /* Colors.swift in Sources */,
 				65C61B481F9DCF10002F87F6 /* Images.swift in Sources */,
@@ -537,8 +578,11 @@
 				654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */,
 				65BEF9951F9F7408005B6389 /* ReusableView.swift in Sources */,
 				654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */,
+				65BEF9A91FA07F19005B6389 /* SettingsView.swift in Sources */,
+				65BEF9991FA07C6E005B6389 /* CryptocurrencyCoordinator.swift in Sources */,
 				65BEF9971F9F7413005B6389 /* NibLoadableView.swift in Sources */,
 				65C61B521F9DD99B002F87F6 /* NewsVC.swift in Sources */,
+				65BEF99B1FA07C7B005B6389 /* SettingsCoordinator.swift in Sources */,
 				65DD0F5A1F9F2A8F00CC665A /* MainCoordinator.swift in Sources */,
 				65C61B541F9DD9AA002F87F6 /* NewsVM.swift in Sources */,
 			);
