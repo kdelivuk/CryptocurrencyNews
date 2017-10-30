@@ -85,23 +85,22 @@ final class NewsVMMock: NewsVMProtocol {
 struct CurrencyMock {
     
     static private var currencies: [Currency] = [
-        Currency(name: "bitcoin"),
-        Currency(name: "ethereum"),
-        Currency(name: "ripple"),
-        Currency(name: "bitcoin-cash"),
-        Currency(name: "litecoin"),
-        Currency(name: "dash"),
-        Currency(name: "nem"),
-        Currency(name: "neo"),
-        Currency(name: "bitconnect"),
-        Currency(name: "monero"),
-        Currency(name: "iota"),
-        Currency(name: "ethereum-classic"),
-        Currency(name: "qtum"),
-        Currency(name: "cardano"),
-        Currency(name: "stellar"),
-        Currency(name: "lisk"),
-        Currency(name: "zcash")
+        Currency(rank: "1", name: "bitcoin", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "2", name: "ethereum", priceInFiat: "5738.89", change: "773945000.0"),
+        Currency(rank: "3", name: "ripple", priceInFiat: "5738.89", change: "162793000.0"),
+        Currency(rank: "4", name: "bitcoin-cash", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "5", name: "litecoin", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "6", name: "dash", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "7", name: "neo", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "8", name: "bitconnect", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "9", name: "monero", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "10", name: "iota", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "11", name: "ethereum-classic", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "12", name: "qtum", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "13", name: "cardano", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "14", name: "stellar", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "15", name: "lisk", priceInFiat: "5738.89", change: "3113190000.0"),
+        Currency(rank: "16", name: "zcash", priceInFiat: "5738.89", change: "3113190000.0")
     ]
     
     static func generateData() -> [Currency] {

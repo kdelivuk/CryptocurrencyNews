@@ -9,26 +9,49 @@
 import Foundation
 import Alamofire
 
+public enum Currency: String {
+    case aud
+    case brl
+    case cad
+}
+
 enum Router {
+    
+    case getCriptocurrencies(limit: Int, convert: Currency)
     
     fileprivate var baseURL: URL {
         return URL(string: "")!
     }
     
     var path: String {
-        return ""
+        switch self {
+        case .getCriptocurrencies:
+            return "ticker/"
+        }
     }
     
     var method: HTTPMethod {
-        return .get
+        switch self {
+        case .getCriptocurrencies:
+            return .get
+        }
     }
     
     var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
+        switch self {
+        case .getCriptocurrencies:
+            return URLEncoding.default
+        }
     }
     
     var parameters: Parameters {
-        return [:]
+        switch self {
+        case .getCriptocurrencies(let limit, let currency):
+            return [
+                "limit": limit,
+                "convert": currency.rawValue.uppercased()
+            ]
+        }
     }
 }
 

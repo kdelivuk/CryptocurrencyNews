@@ -9,23 +9,27 @@
 import RxSwift
 
 final class NewsVM: NewsVMProtocol {
-    func search(word: String) {
-        
-    }
-    
-    
+
+    // MARK: - Public Properties
+
     var disposeBag: DisposeBag
     var stateObservable: Observable<NewsVMState>
     
-
     var numberOfRows: Int
 
-    // MARK: - Class Lifecycle
+    private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     
-    init() {
+    // MARK: - Class Lifecycle
+
+    init(cryptocurrencyManager: CryptocurrencyManagerProtocol) {
+        self.cryptocurrencyManager = cryptocurrencyManager
         disposeBag = DisposeBag()
         stateObservable = Observable.empty()
         numberOfRows = 0
+    }
+    
+    func search(word: String) {
+        cryptocurrencyManager.search()
     }
     
     func clear() {
@@ -36,6 +40,6 @@ final class NewsVM: NewsVMProtocol {
     }
     
     func item(for indexPath: IndexPath) -> Currency {
-        return Currency(name: "")
+        return Currency(rank: "1", name: "", priceInFiat: "", change: "")
     }
 }

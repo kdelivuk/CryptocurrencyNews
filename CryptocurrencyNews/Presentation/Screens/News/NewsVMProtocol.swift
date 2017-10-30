@@ -21,10 +21,16 @@ enum SearchResultState {
 }
 
 struct Currency {
+    let rank: String
     let name: String
+    let priceInFiat: String
+    let change: String
     
-    init(name: String) {
+    init(rank: String, name: String, priceInFiat: String, change: String) {
+        self.rank = rank
         self.name = name
+        self.priceInFiat = priceInFiat
+        self.change = change
     }
 }
 
