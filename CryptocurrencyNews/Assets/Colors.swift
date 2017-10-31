@@ -9,7 +9,11 @@
 import UIKit
 
 struct Color {
+    
+    static let main = UIColor.green
+    
     static let black = UIColor.black
     static let white = UIColor.white
     static let clear = UIColor.clear
+    static let black50 = UIColor.black.withAlphaComponent(0.5)
 }

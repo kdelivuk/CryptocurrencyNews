@@ -9,15 +9,9 @@
 import Foundation
 import Alamofire
 
-public enum Currency: String {
-    case aud
-    case brl
-    case cad
-}
-
 enum Router {
     
-    case getCriptocurrencies(limit: Int, convert: Currency)
+    case getCriptocurrencies(limit: Int, convert: FiatCurrency)
     
     fileprivate var baseURL: URL {
         return URL(string: "")!

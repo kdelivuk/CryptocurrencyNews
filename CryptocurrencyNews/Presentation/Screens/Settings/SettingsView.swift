@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsView: UIView {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

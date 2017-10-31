@@ -15,8 +15,14 @@
 		654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */; };
 		654A7AE01F9E05EF00F27A1D /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */; };
 		654A7AE21F9E05FA00F27A1D /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654A7AE11F9E05FA00F27A1D /* NewsCell.xib */; };
+		6551C7AA1FA87C9100978C13 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551C7A91FA87C9100978C13 /* Fonts.swift */; };
+		6551C7AC1FA8803F00978C13 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551C7AB1FA8803F00978C13 /* MainTabBarController.swift */; };
+		6551C7AE1FA8A14500978C13 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551C7AD1FA8A14500978C13 /* UINavigationBar+Extension.swift */; };
 		6557F43E1FA732C50051E382 /* DataRequest+ResponseJSONDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557F43D1FA732C50051E382 /* DataRequest+ResponseJSONDict.swift */; };
 		6557F4411FA733070051E382 /* CryptocurrencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557F4401FA733070051E382 /* CryptocurrencyManager.swift */; };
+		6557F44A1FA850660051E382 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557F4491FA850660051E382 /* SettingsCell.swift */; };
+		6557F44C1FA850720051E382 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6557F44B1FA850720051E382 /* SettingsCell.xib */; };
+		6557F44E1FA865B20051E382 /* FiatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6557F44D1FA865B20051E382 /* FiatCurrency.swift */; };
 		655A751D1F9DDAF70011C2BE /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A751C1F9DDAF70011C2BE /* InformationVC.swift */; };
 		655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A751E1F9DDB170011C2BE /* InformationVM.swift */; };
 		655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */; };
@@ -97,8 +103,14 @@
 		654A7ADC1F9E00D500F27A1D /* StoryboardComplatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardComplatible.swift; sourceTree = "<group>"; };
 		654A7ADF1F9E05EF00F27A1D /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		654A7AE11F9E05FA00F27A1D /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		6551C7A91FA87C9100978C13 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		6551C7AB1FA8803F00978C13 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		6551C7AD1FA8A14500978C13 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
 		6557F43D1FA732C50051E382 /* DataRequest+ResponseJSONDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+ResponseJSONDict.swift"; sourceTree = "<group>"; };
 		6557F4401FA733070051E382 /* CryptocurrencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptocurrencyManager.swift; sourceTree = "<group>"; };
+		6557F4491FA850660051E382 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		6557F44B1FA850720051E382 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		6557F44D1FA865B20051E382 /* FiatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatCurrency.swift; sourceTree = "<group>"; };
 		655A751C1F9DDAF70011C2BE /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
 		655A751E1F9DDB170011C2BE /* InformationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVM.swift; sourceTree = "<group>"; };
 		655A75201F9DDB2C0011C2BE /* InformationVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVMProtocol.swift; sourceTree = "<group>"; };
@@ -219,6 +231,15 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
+		6557F4481FA84EB20051E382 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6557F4491FA850660051E382 /* SettingsCell.swift */,
+				6557F44B1FA850720051E382 /* SettingsCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		655A751B1F9DDAD50011C2BE /* Information */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +255,7 @@
 		65BEF9A11FA07EFB005B6389 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				6557F4481FA84EB20051E382 /* Views */,
 				65BEF9A21FA07F03005B6389 /* SettingsVC.swift */,
 				65BEF9A41FA07F0A005B6389 /* SettingsVM.swift */,
 				65BEF9A61FA07F11005B6389 /* SettingsVMProtocol.swift */,
@@ -248,6 +270,7 @@
 			children = (
 				65C61B471F9DCF10002F87F6 /* Images.swift */,
 				65C61B491F9DCF1B002F87F6 /* Colors.swift */,
+				6551C7A91FA87C9100978C13 /* Fonts.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -269,6 +292,7 @@
 				65BEF99C1FA07CB4005B6389 /* NSObject+Extension.swift */,
 				65BEF99E1FA07D68005B6389 /* UIViewController+Extension.swift */,
 				6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */,
+				6551C7AD1FA8A14500978C13 /* UINavigationBar+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,6 +315,7 @@
 				65BEF9941F9F7408005B6389 /* ReusableView.swift */,
 				65BEF9961F9F7413005B6389 /* NibLoadableView.swift */,
 				6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */,
+				6551C7AB1FA8803F00978C13 /* MainTabBarController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -348,6 +373,7 @@
 				65DD0F551F9F25C900CC665A /* APIError.swift */,
 				65DD0F571F9F25D200CC665A /* APIResult.swift */,
 				659CB7D71FA3281F000B03F2 /* Cryptocurrency.swift */,
+				6557F44D1FA865B20051E382 /* FiatCurrency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -476,6 +502,7 @@
 				650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */,
 				65C61B5A1F9DD9DF002F87F6 /* NewsVC.storyboard in Resources */,
 				654A7AE21F9E05FA00F27A1D /* NewsCell.xib in Resources */,
+				6557F44C1FA850720051E382 /* SettingsCell.xib in Resources */,
 				654A7AD91F9DDD4E00F27A1D /* InformationVC.storyboard in Resources */,
 				65BEF9AB1FA07F23005B6389 /* SettingsVC.storyboard in Resources */,
 				650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */,
@@ -594,17 +621,20 @@
 				655A751F1F9DDB170011C2BE /* InformationVM.swift in Sources */,
 				65C61B581F9DD9D4002F87F6 /* NewsView.swift in Sources */,
 				6584D8071FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift in Sources */,
+				6551C7AE1FA8A14500978C13 /* UINavigationBar+Extension.swift in Sources */,
 				65BEF99D1FA07CB4005B6389 /* NSObject+Extension.swift in Sources */,
 				65C61B4E1F9DCF6F002F87F6 /* Coordinator.swift in Sources */,
 				65BEF9911F9F730C005B6389 /* UIColor+Extension.swift in Sources */,
 				655A75211F9DDB2C0011C2BE /* InformationVMProtocol.swift in Sources */,
 				65DD0F5C1F9F306F00CC665A /* NewsVMMock.swift in Sources */,
+				6557F44A1FA850660051E382 /* SettingsCell.swift in Sources */,
 				65BEF9A31FA07F03005B6389 /* SettingsVC.swift in Sources */,
 				650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */,
 				65BEF9A51FA07F0A005B6389 /* SettingsVM.swift in Sources */,
 				65BEF9A71FA07F11005B6389 /* SettingsVMProtocol.swift in Sources */,
 				655A751D1F9DDAF70011C2BE /* InformationVC.swift in Sources */,
 				65C61B4A1F9DCF1B002F87F6 /* Colors.swift in Sources */,
+				6551C7AC1FA8803F00978C13 /* MainTabBarController.swift in Sources */,
 				65C61B481F9DCF10002F87F6 /* Images.swift in Sources */,
 				65BEF9931F9F73C6005B6389 /* UITableView+Extension.swift in Sources */,
 				655A75231F9DDB3E0011C2BE /* InformationView.swift in Sources */,
@@ -612,6 +642,7 @@
 				65BEF9951F9F7408005B6389 /* ReusableView.swift in Sources */,
 				654A7ADD1F9E00D500F27A1D /* StoryboardComplatible.swift in Sources */,
 				65BEF9A91FA07F19005B6389 /* SettingsView.swift in Sources */,
+				6551C7AA1FA87C9100978C13 /* Fonts.swift in Sources */,
 				65BEF9991FA07C6E005B6389 /* CryptocurrencyCoordinator.swift in Sources */,
 				65BEF9971F9F7413005B6389 /* NibLoadableView.swift in Sources */,
 				65C61B521F9DD99B002F87F6 /* NewsVC.swift in Sources */,
@@ -632,6 +663,7 @@
 				65DD0F501F9F257F00CC665A /* Router.swift in Sources */,
 				659CB7DC1FA32A7B000B03F2 /* Connector+CryptocurrencyType.swift in Sources */,
 				659CB7D81FA3281F000B03F2 /* Cryptocurrency.swift in Sources */,
+				6557F44E1FA865B20051E382 /* FiatCurrency.swift in Sources */,
 				65DD0F4E1F9F257800CC665A /* Connector.swift in Sources */,
 				659CB7DA1FA329F7000B03F2 /* JSONDecodable.swift in Sources */,
 				65DD0F561F9F25C900CC665A /* APIError.swift in Sources */,

@@ -55,6 +55,7 @@ class NewsVC: UIViewController {
             
             switch viewModelState {
             case .top100:
+                weakself.title = "Top 100"
                 weakself.mainView.tableView.backgroundView = nil
                 weakself.mainView.tableView.reloadData()
                 weakself.loaderVC.stopAnimating()
@@ -132,7 +133,7 @@ extension NewsVC: UITableViewDataSource {
         let cell = tableView.dequeue(for: indexPath, type: NewsCell.self)
         let currency = viewModel.item(for: indexPath)
         
-        cell.leftTitleLabel.text = currency.name
+        cell.configure(currency: currency)
         
         return cell
     }
@@ -156,6 +157,7 @@ extension NewsVC: UISearchBarDelegate {
 
         navigationController?.setNavigationBarHidden(false, animated: true)
         searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
