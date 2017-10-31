@@ -42,6 +42,8 @@ final class CryptocurrencyCoordinator: Coordinator {
             weakself.pushInformationScreen(on: navigationController)
         }
         
+        navigationController.navigationBar.coloured()
+        
         navigationController.setViewControllers([newsVC], animated: false)
     }
     

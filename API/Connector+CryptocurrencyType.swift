@@ -9,11 +9,11 @@
 import RxSwift
 
 public protocol CryptocurrencyType {
-    func getCryptocurrencies(limit: Int, in currency: Currency) -> Observable<APIResult<[Cryptocurrency]>>
+    func getCryptocurrencies(limit: Int, in currency: FiatCurrency) -> Observable<APIResult<[Cryptocurrency]>>
 }
 
 extension Connector: CryptocurrencyType {
-    public func getCryptocurrencies(limit: Int, in currency: Currency) -> Observable<APIResult<[Cryptocurrency]>> {
+    public func getCryptocurrencies(limit: Int, in currency: FiatCurrency) -> Observable<APIResult<[Cryptocurrency]>> {
         return Observable<APIResult<[Cryptocurrency]>>.create({ [unowned self] observer in
             self.manager
                 .request(Router.getCriptocurrencies(limit: limit, convert: currency))

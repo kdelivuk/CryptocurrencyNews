@@ -12,8 +12,7 @@ import SnapKit
 final class MainCoordinator: Coordinator {
 
     fileprivate lazy var tabBarController: UITabBarController = {
-        let tabBarController = UITabBarController()
-        tabBarController.tabBar.backgroundColor = UIColor(hex: 0xF9F9F9)
+        let tabBarController = MainTabBarController()
         return tabBarController
     }()
     
@@ -31,11 +30,11 @@ final class MainCoordinator: Coordinator {
         push(childCoordinator: settingsCoordinator)
         
         cryptocurrencyNC.tabBarItem.title = "Cryptocurrency"
-//        cryptocurrencyNC.tabBarItem.image =
+        cryptocurrencyNC.tabBarItem.image = Images.iconStock
 //        cryptocurrencyNC.tabBarItem.selectedImage =
         
         settingsNC.tabBarItem.title = "Settings"
-//        settingsNC.tabBarItem.image =
+        settingsNC.tabBarItem.image = Images.iconSettings
 //        settingsNC.tabBarItem.selectedImage =
         
 //        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: Colors.general], for: .selected)

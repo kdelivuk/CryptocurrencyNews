@@ -37,6 +37,8 @@ final class SettingsCoordinator: Coordinator {
         let settingsVM = SettingsVM()
         let settingsVC = SettingsVC.instantiateStoryboardVC(viewModel: settingsVM)
     
+        navigationController.navigationBar.coloured()
+        
         navigationController.setViewControllers([settingsVC], animated: false)
     }
 }

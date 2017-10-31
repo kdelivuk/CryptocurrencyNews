@@ -16,5 +16,6 @@ class NewsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        searchBar.placeholder = NSLocalizedString("Search", comment: "NewsView.searchBar.placeholder")
     }
 }

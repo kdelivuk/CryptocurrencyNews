@@ -10,7 +10,11 @@ import UIKit
 
 class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
     
-    @IBOutlet weak var leftTitleLabel: UILabel!
+    @IBOutlet private weak var rankLabel: UILabel!
+    @IBOutlet private weak var symbolLabel: UILabel!
+    
+    @IBOutlet private weak var priceInFiatLabel: UILabel!
+    @IBOutlet private weak var valutChangeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +24,16 @@ class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        leftTitleLabel.text = ""
+        rankLabel.text = ""
+        symbolLabel.text = ""
+        priceInFiatLabel.text = ""
+        valutChangeLabel.text = ""
+    }
+    
+    func configure(currency: Currency) {
+        rankLabel.text = currency.rank
+        symbolLabel.text = currency.name
+        priceInFiatLabel.text = currency.priceInFiat
+        valutChangeLabel.text = currency.change
     }
 }

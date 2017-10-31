@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
-            timestampString = "530742251.436961"
+            timestampString = "531146739.690265"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "bindViewModel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
-            timestampString = "530742251.437108"
+            timestampString = "531146739.690543"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "bindViewModel()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
-            timestampString = "530742251.437178"
+            timestampString = "531146739.69079"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "bindViewModel()"
             landmarkType = "7">
             <Locations>
@@ -58,12 +58,12 @@
                   moduleName = "CryptocurrencyNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kristijandelivuk/Desktop/DECODE/CryptocurrencyNews/CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
-                  timestampString = "530742114.304141"
+                  timestampString = "531145247.660037"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1475">
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1804">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,14 +73,30 @@
                   moduleName = "CryptocurrencyNews"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kristijandelivuk/Desktop/DECODE/CryptocurrencyNews/CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
-                  timestampString = "530742114.306106"
+                  timestampString = "531145247.664703"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "32">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptocurrencyNews/Presentation/Screens/News/NewsVC.swift"
+            timestampString = "531146739.690922"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "bindViewModel()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

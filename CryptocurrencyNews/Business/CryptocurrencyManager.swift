@@ -24,7 +24,7 @@ class CryptocurrencyManager {
     func search() -> Observable<[Cryptocurrency]> {
         
         let limit = 100
-        let currency = API.Currency.cad
+        let currency = API.FiatCurrency.usd
         
         return connector
             .getCryptocurrencies(limit: limit, in: currency)
