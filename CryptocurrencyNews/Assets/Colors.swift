@@ -16,4 +16,5 @@ struct Color {
     static let white = UIColor.white
     static let clear = UIColor.clear
     static let black50 = UIColor.black.withAlphaComponent(0.5)
+    static let black30 = UIColor.black.withAlphaComponent(0.3)
 }

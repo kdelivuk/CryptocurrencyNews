@@ -13,11 +13,13 @@ final class CryptocurrencyCoordinator: Coordinator {
     // MARK: - Private Properties
     
     private let navigationController: UINavigationController
+    private let cryptocurrencyManager: CryptocurrencyManager
     
     // MARK: - Coordinator Lifecycle
     
-    init(in navigationController: UINavigationController, viewController: UIViewController) {
+    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManager) {
         self.navigationController = navigationController
+        self.cryptocurrencyManager = cryptocurrencyManager
         super.init(in: viewController)
     }
     
@@ -34,7 +36,7 @@ final class CryptocurrencyCoordinator: Coordinator {
     // MARK: - Private Methods
     
     private func setNewsScreen(in navigationController: UINavigationController) {
-        let newsVM = NewsVMMock()
+        let newsVM = NewsVM(cryptocurrencyManager: cryptocurrencyManager)
         let newsVC = NewsVC.instantiateStoryboardVC(viewModel: newsVM)
         
         newsVM.onDidTapItem = { [weak self, unowned navigationController] _ in

@@ -20,7 +20,7 @@ public struct Cryptocurrency: JSONDecodable {
     public let available_supply: String
     public let total_supply: String
     public let percent_change_1h: String
-    public let percent_change_24h: String
+    public let percent_change_24h: Double
     public let percent_change_7d: String
     public let last_updated: String
     
@@ -56,7 +56,7 @@ public struct Cryptocurrency: JSONDecodable {
         self.available_supply = available_supply
         self.total_supply = total_supply
         self.percent_change_1h = percent_change_1h
-        self.percent_change_24h = percent_change_24h
+        self.percent_change_24h = Double(percent_change_24h) ?? 0.0
         self.percent_change_7d = percent_change_7d
         self.last_updated = last_updated
     }

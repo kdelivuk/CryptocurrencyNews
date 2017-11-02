@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import API
 
 final class MainCoordinator: Coordinator {
 
@@ -16,17 +17,24 @@ final class MainCoordinator: Coordinator {
         return tabBarController
     }()
     
+    private let connector = Connector()
+        
+    var cryptocurrencyManager: CryptocurrencyManager {
+        return CryptocurrencyManager(connector: self.connector)
+    }
+    
     override func start() {
         openLandingScreen(in: viewController)
     }
     
     fileprivate func openLandingScreen(in viewController: UIViewController) {
+
         let cryptocurrencyNC = UINavigationController()
-        let cryptocurrencyCoordinator = CryptocurrencyCoordinator(in: cryptocurrencyNC, viewController: viewController)
+        let cryptocurrencyCoordinator = CryptocurrencyCoordinator(in: cryptocurrencyNC, viewController: viewController, cryptocurrencyManager: cryptocurrencyManager)
         push(childCoordinator: cryptocurrencyCoordinator)
         
         let settingsNC = UINavigationController()
-        let settingsCoordinator = SettingsCoordinator(in: settingsNC, viewController: viewController)
+        let settingsCoordinator = SettingsCoordinator(in: settingsNC, viewController: viewController, cryptocurrencyManager: cryptocurrencyManager)
         push(childCoordinator: settingsCoordinator)
         
         cryptocurrencyNC.tabBarItem.title = "Cryptocurrency"

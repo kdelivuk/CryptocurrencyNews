@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InformationVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr2-BY-b8y">
-                                <rect key="frame" x="133" y="323" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Og-l4-Aq2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rr2-BY-b8y" firstAttribute="centerX" secondItem="aqs-Je-pIn" secondAttribute="centerX" id="PPM-Mo-CDs"/>
-                            <constraint firstItem="rr2-BY-b8y" firstAttribute="centerY" secondItem="aqs-Je-pIn" secondAttribute="centerY" id="SuR-Hp-3h9"/>
+                            <constraint firstItem="2Og-l4-Aq2" firstAttribute="top" secondItem="YZp-zG-UoX" secondAttribute="top" id="JxK-33-Kb7"/>
+                            <constraint firstItem="2Og-l4-Aq2" firstAttribute="leading" secondItem="YZp-zG-UoX" secondAttribute="leading" id="YA7-1R-oxG"/>
+                            <constraint firstItem="YZp-zG-UoX" firstAttribute="bottom" secondItem="2Og-l4-Aq2" secondAttribute="bottom" id="msg-0j-Rc3"/>
+                            <constraint firstItem="YZp-zG-UoX" firstAttribute="trailing" secondItem="2Og-l4-Aq2" secondAttribute="trailing" id="saD-Wa-Ysh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YZp-zG-UoX"/>
                     </view>

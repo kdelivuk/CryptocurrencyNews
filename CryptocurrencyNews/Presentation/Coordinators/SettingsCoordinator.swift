@@ -13,10 +13,12 @@ final class SettingsCoordinator: Coordinator {
     // MARK: - Private Properties
     
     private let navigationController: UINavigationController
+    private let cryptocurrencyManager: CryptocurrencyManager
     
     // MARK: - Coordinator Lifecycle
     
-    init(in navigationController: UINavigationController, viewController: UIViewController) {
+    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManager) {
+        self.cryptocurrencyManager = cryptocurrencyManager
         self.navigationController = navigationController
         super.init(in: viewController)
     }
@@ -34,7 +36,7 @@ final class SettingsCoordinator: Coordinator {
     // MARK: - Private Methods
     
     private func setSettingsScreen(in navigationController: UINavigationController) {
-        let settingsVM = SettingsVM()
+        let settingsVM = SettingsVM(cryptocurrencyManager: cryptocurrencyManager)
         let settingsVC = SettingsVC.instantiateStoryboardVC(viewModel: settingsVM)
     
         navigationController.navigationBar.coloured()

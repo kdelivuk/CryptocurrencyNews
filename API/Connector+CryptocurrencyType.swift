@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import Defines
 
 public protocol CryptocurrencyType {
     func getCryptocurrencies(limit: Int, in currency: FiatCurrency) -> Observable<APIResult<[Cryptocurrency]>>

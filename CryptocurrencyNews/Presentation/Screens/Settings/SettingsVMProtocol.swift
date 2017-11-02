@@ -6,7 +6,8 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import Defines
+import RxSwift
 
 enum SettingsVMItem {
     case limit
@@ -14,10 +15,26 @@ enum SettingsVMItem {
 }
 
 protocol SettingsVMProtocol {
+    
+    var title: String { get }
+    var headerTitle: String { get }
+    var footerTitle: String { get }
+    
     var numberOfItems: Int { get }
+    var currencies: [FiatCurrency] { get }
+    
+    var initialFiatCurrency: FiatCurrency { get }
+    
+    var limitResultsTitle: String { get }
+    var fiatCurrencyTitle: String { get }
+    
+    var selectedCurrencyObservable: Observable<FiatCurrency> { get }
+    var limitObservable: Observable<Int> { get }
     
     func item(for indexPath: IndexPath) -> SettingsVMItem
-    func didSelectItem(at indexPath: IndexPath)
+    
+    func selectCurrency(at row: Int)
+    func changeLimit(to limit: String)
 }
 
 extension SettingsVMItem {
