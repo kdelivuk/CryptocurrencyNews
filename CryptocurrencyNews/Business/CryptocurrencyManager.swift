@@ -8,26 +8,73 @@
 
 import RxSwift
 import API
+import Defines
 
 protocol CryptocurrencyManagerProtocol {
+    
+    var limitObservable: Observable<Int> { get }
+    var fiatCurrencyObservable: Observable<FiatCurrency> { get }
+    
+    var limit: Int { get }
+    var fiatCurrency: FiatCurrency { get }
+    
     func search() -> Observable<[Cryptocurrency]>
 }
 
-class CryptocurrencyManager {
+class CryptocurrencyManager: CryptocurrencyManagerProtocol {
+    
+    private struct Constants {
+        static let applicationAlreadyLaunched = "applicationAlreadyLaunched"
+        static let limitKey = "limitKey"
+        static let currencyKey = "currencyKey"
+        static let limitDefaultValue = 100
+        static let fiatCurrencyDefaultValue = FiatCurrency.usd
+    }
+    
+    var limitObservable: Observable<Int> {
+        return self._limit.asObservable()
+    }
+    
+    var fiatCurrencyObservable: Observable<FiatCurrency> {
+        return self._fiatCurrency.asObservable()
+    }
+    
+    var limit: Int {
+        return _limit.value
+    }
+    
+    var fiatCurrency: FiatCurrency {
+        return _fiatCurrency.value
+    }
+    
+    // MARK: - Private properties
+    
+    private let _limit: Variable<Int>
+    private let _fiatCurrency: Variable<FiatCurrency>
     
     private let connector: CryptocurrencyType
     
+    // MARK: - Class Lifecycle
+    
     init(connector: CryptocurrencyType) {
         self.connector = connector
+
+        // if application is loaded for the first time
+        // set default fiat currencies and limit
+        if UserDefaults.standard.bool(forKey: Constants.applicationAlreadyLaunched) == false {
+            UserDefaults.standard.set(Constants.limitDefaultValue, forKey: Constants.limitKey)
+            UserDefaults.standard.set(Constants.fiatCurrencyDefaultValue.rawValue, forKey: Constants.currencyKey)
+            UserDefaults.standard.set(true, forKey: Constants.applicationAlreadyLaunched)
+            UserDefaults.standard.synchronize()
+        }
+        
+        _limit = Variable(UserDefaults.standard.integer(forKey: Constants.limitKey))
+        _fiatCurrency = Variable(FiatCurrency(rawValue: UserDefaults.standard.string(forKey: Constants.currencyKey)!)!)
     }
     
     func search() -> Observable<[Cryptocurrency]> {
-        
-        let limit = 100
-        let currency = API.FiatCurrency.usd
-        
         return connector
-            .getCryptocurrencies(limit: limit, in: currency)
+            .getCryptocurrencies(limit: _limit.value, in: _fiatCurrency.value)
             .map { (result) -> [Cryptocurrency] in
                 switch result {
                 case .success(let cryptocurrencies):
@@ -38,4 +85,19 @@ class CryptocurrencyManager {
         }
     }
     
+    func setLimit(_ newLimit: Int) {
+        if newLimit != _limit.value {
+            UserDefaults.standard.set(newLimit, forKey: Constants.limitKey)
+            UserDefaults.standard.synchronize()
+            _limit.value = newLimit
+        }
+    }
+    
+    func setFiatCurrency(_ newCurrency: FiatCurrency) {
+        if newCurrency != _fiatCurrency.value {
+            UserDefaults.standard.set(newCurrency.rawValue, forKey: Constants.currencyKey)
+            UserDefaults.standard.synchronize()
+            _fiatCurrency.value = newCurrency
+        }
+    }
 }

@@ -14,10 +14,7 @@ class NewsVC: UIViewController {
     private let refreshControl = UIRefreshControl()
     private let emptyStateView = TableViewEmptyStateView()
     
-    fileprivate lazy var loaderVC: FullScreenLoaderVC = {
-        return FullScreenLoaderVC()
-        
-    }()
+    private var loaderVC: FullScreenLoaderVC?
     
     fileprivate var keyboardHeight: CGFloat?
     
@@ -30,6 +27,7 @@ class NewsVC: UIViewController {
         mainView.tableView.delegate = self
         
         mainView.tableView.rowHeight = 60
+        mainView.tableView.tableFooterView = UIView()
         
         mainView.tableView.register(NewsCell.self)
         
@@ -47,44 +45,51 @@ class NewsVC: UIViewController {
         // refreshControl.endRefreshing()
         
         bindViewModel()
+        
+        viewModel.search(word: "")
     }
-    
+
     private func bindViewModel() {
         viewModel.stateObservable.subscribe(onNext: { [weak self] (viewModelState) in
             guard let weakself = self else { return }
-            
+            print("state")
             switch viewModelState {
-            case .top100:
-                weakself.title = "Top 100"
+            case .top:
+//                weakself.loaderVC?.stopAnimating()
+//                weakself.loaderVC?.removeFromParentViewController()
+//                weakself.loaderVC = nil
+                weakself.title = weakself.viewModel.title
                 weakself.mainView.tableView.backgroundView = nil
                 weakself.mainView.tableView.reloadData()
-                weakself.loaderVC.stopAnimating()
-                weakself.loaderVC.removeFromParentViewController()
             case .search(let searchState):
                 switch searchState {
                 case .empty:
+                    weakself.loaderVC?.stopAnimating()
+                    weakself.loaderVC?.removeFromParentViewController()
+                    weakself.loaderVC = nil
                     weakself.mainView.tableView.backgroundView = weakself.emptyStateView
                     weakself.mainView.tableView.reloadData()
-                    weakself.loaderVC.stopAnimating()
-                    weakself.loaderVC.removeFromParentViewController()
                 case .searching:
-                    weakself.attachChildVC(weakself.loaderVC)
-                    weakself.loaderVC.view.snp.makeConstraints({ (make) in
-                        make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
-                        make.left.right.equalTo(0)
-                        make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
-                    })
+                    weakself.title = weakself.viewModel.title
+//                    weakself.loaderVC = FullScreenLoaderVC()
+//                    weakself.attachChildVC(weakself.loaderVC!)
+//                    weakself.loaderVC?.view.snp.makeConstraints({ (make) in
+//                        make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
+//                        make.left.right.equalTo(0)
+//                        make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
+//                    })
                 case .results(let results):
+                    weakself.loaderVC?.stopAnimating()
+                    weakself.loaderVC?.removeFromParentViewController()
+                    weakself.loaderVC = nil
                     weakself.mainView.tableView.backgroundView = nil
                     weakself.mainView.tableView.reloadData()
-                    weakself.loaderVC.stopAnimating()
-                    weakself.loaderVC.removeFromParentViewController()
                 case .error(let error):
                     ()
                 }
                 
             }
-        }).addDisposableTo(viewModel.disposeBag)
+        }).disposed(by: viewModel.disposeBag)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

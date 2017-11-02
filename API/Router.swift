@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import Defines
 import Alamofire
 
 enum Router {
@@ -14,7 +14,7 @@ enum Router {
     case getCriptocurrencies(limit: Int, convert: FiatCurrency)
     
     fileprivate var baseURL: URL {
-        return URL(string: "")!
+        return URL(string: "https://api.coinmarketcap.com/v1/")!
     }
     
     var path: String {

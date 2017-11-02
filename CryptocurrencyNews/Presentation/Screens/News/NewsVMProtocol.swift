@@ -9,7 +9,7 @@
 import RxSwift
 
 enum NewsVMState {
-    case top100([Currency])
+    case top([Currency])
     case search(SearchResultState)
 }
 
@@ -24,18 +24,19 @@ struct Currency {
     let rank: String
     let name: String
     let priceInFiat: String
-    let change: String
+    let changeIn24h: Double
     
-    init(rank: String, name: String, priceInFiat: String, change: String) {
+    init(rank: String, name: String, priceInFiat: String, changeIn24h: Double) {
         self.rank = rank
         self.name = name
         self.priceInFiat = priceInFiat
-        self.change = change
+        self.changeIn24h = changeIn24h
     }
 }
 
 
 protocol NewsVMProtocol {
+    var title: String { get }
     var disposeBag: DisposeBag { get }
     var numberOfRows: Int { get }
     var stateObservable: Observable<NewsVMState> { get }
