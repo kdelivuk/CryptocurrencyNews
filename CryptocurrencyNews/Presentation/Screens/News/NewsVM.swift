@@ -21,27 +21,19 @@ final class NewsVM: NewsVMProtocol {
     let disposeBag: DisposeBag
     
     var numberOfRows: Int {
-        return criptocurrencies.count
+        return filteredCriptocurrencies.count
     }
     
-    var title: String {
-        switch _state.value {
-        case .top:
-            return NSLocalizedString("Top \(cryptocurrencyManager.limit)", comment: "")
-        case .search(let state):
-            switch state {
-            case .searching:
-                return NSLocalizedString("Searching...", comment: "")
-            default:
-                return ""
-            }
-        }
-    }
+    var priceInFiat: String
+    
+    lazy var titleObservable: Observable<String> = self._title.asObservable().throttle(0.5, scheduler: MainScheduler.instance)
+    private var _title: Variable<String>
+    
     // MARK: - Private Properties
     
     private var criptocurrencies: [Currency]
+    private var filteredCriptocurrencies: [Currency]
     private let _state: Variable<NewsVMState>
-    
     
     private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     
@@ -52,6 +44,38 @@ final class NewsVM: NewsVMProtocol {
         disposeBag = DisposeBag()
         _state = Variable(NewsVMState.top([]))
         criptocurrencies = []
+        filteredCriptocurrencies = []
+        _title = Variable(NSLocalizedString("Top \(cryptocurrencyManager.limit)", comment: ""))
+        priceInFiat = "Prince in \(cryptocurrencyManager.fiatCurrency)"
+        
+        cryptocurrencyManager
+            .limitObservable
+            .subscribe(onNext: { [weak self] limit in
+                guard let weakself = self else { return }
+                
+                switch weakself._state.value {
+                case .top:
+                    weakself._title.value = NSLocalizedString("Top \(limit)", comment: "")
+                case .search(let state):
+                    switch state {
+                    case .searching:
+                        weakself._title.value = NSLocalizedString("Searching...", comment: "")
+                    default:
+                        weakself._title.value = ""
+                    }
+                }
+                
+                weakself.top()
+                
+            }).disposed(by: disposeBag)
+        
+        cryptocurrencyManager
+            .fiatCurrencyObservable
+            .subscribe(onNext: { [weak self] currency in
+                guard let weakself = self else { return }
+                weakself.priceInFiat = NSLocalizedString("Prince in \(currency.title())", comment: "")
+                weakself.top()
+            }).disposed(by: disposeBag)
     }
     
     func search(word: String) {
@@ -61,54 +85,54 @@ final class NewsVM: NewsVMProtocol {
         
         // if there are more than 0 characters currently
         // present in the searchbar
-        if word.characters.count > 0 {
+        if word.count > 0 {
             
-            // query through all the mock items and find ones that contain search word
-//            cryptocurrencyManager
-//                .search()
-//                .throttle(0.5, scheduler: MainScheduler.instance)
-//                .subscribe(onNext: { (currencies) in
-//                    // if there are no items that satisfy our search result
-//                    // set the empty state for search table view
-//                    if currencies.count == 0 {
-//                        self.criptocurrencies = []
-//                        self._state.value = NewsVMState.search(SearchResultState.empty)
-//                    } else {
-//                        // else return those items and show them to user
-//                        self.criptocurrencies = currencies.map { Currency(rank: $0.rank, name: $0.symbol, priceInFiat: $0.price_usd, change: $0.percent_change_24h) }
-//                        self._state.value = NewsVMState.search(SearchResultState.results(self.criptocurrencies))
-//                    }
-//                }, onError: { (error) in
-//
-//                }, onCompleted: {
-//
-//                }).disposed(by: disposeBag)
+            clear()
             
+            // query through all the items and find ones that contain search word
+            filteredCriptocurrencies = self.criptocurrencies.filter({$0.name.contains(word)})
+            
+            // if there are no items that satisfy our search result
+            // set the empty state for search table view
+            if filteredCriptocurrencies.count == 0 {
+                self._state.value = NewsVMState.search(SearchResultState.empty)
+            } else {
+                // else return those items and show them to user
+                self._state.value = NewsVMState.search(SearchResultState.results(self.filteredCriptocurrencies))
+            }
+            
+            self._title.value = NSLocalizedString("\(word)", comment: "")
             
         } else {
             // if the search bar is empty
-            // show the top 100 results to the user
-            cryptocurrencyManager
-                .search()
-                .subscribe(onNext: { (currencies) in
-                    self.criptocurrencies = currencies.map { Currency(rank: $0.rank, name: $0.symbol, priceInFiat: $0.price_usd, changeIn24h: $0.percent_change_24h) }
-                    self._state.value = NewsVMState.top(self.criptocurrencies)
-                }).disposed(by: disposeBag)
+            // show the top results to the user
+            top()
         }
     }
     
+    func top() {
+        cryptocurrencyManager
+            .top()
+            .subscribe(onNext: { [weak self] currencies in
+                guard let weakself = self else { return }
+                weakself.criptocurrencies = currencies.map { Currency(id: $0.id, rank: $0.rank, name: $0.name, symbol: $0.symbol, priceInFiat: $0.price_usd, priceInBitcoin: $0.price_btc, changeIn1h: $0.percent_change_1h, changeIn24h: $0.percent_change_24h, changeIn7d: $0.percent_change_7d, availableSupply: $0.available_supply, totalSupply: $0.total_supply) }
+                weakself.filteredCriptocurrencies = weakself.criptocurrencies
+                weakself._title.value = NSLocalizedString("Top \(weakself.cryptocurrencyManager.limit)", comment: "")
+                weakself._state.value = NewsVMState.top(weakself.filteredCriptocurrencies)
+            }).disposed(by: disposeBag)
+    }
     
     func clear() {
-        criptocurrencies = []
+        filteredCriptocurrencies = []
     }
     
     // MARK: - Public Methods
     
     func item(for indexPath: IndexPath) -> Currency {
-        return criptocurrencies[indexPath.row]
+        return filteredCriptocurrencies[indexPath.row]
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        onDidTapItem(criptocurrencies[indexPath.row])
+        onDidTapItem(filteredCriptocurrencies[indexPath.row])
     }
 }

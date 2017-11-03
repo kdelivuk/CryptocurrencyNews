@@ -13,11 +13,11 @@ final class CryptocurrencyCoordinator: Coordinator {
     // MARK: - Private Properties
     
     private let navigationController: UINavigationController
-    private let cryptocurrencyManager: CryptocurrencyManager
+    private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     
     // MARK: - Coordinator Lifecycle
     
-    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManager) {
+    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManagerProtocol) {
         self.navigationController = navigationController
         self.cryptocurrencyManager = cryptocurrencyManager
         super.init(in: viewController)
@@ -39,9 +39,9 @@ final class CryptocurrencyCoordinator: Coordinator {
         let newsVM = NewsVM(cryptocurrencyManager: cryptocurrencyManager)
         let newsVC = NewsVC.instantiateStoryboardVC(viewModel: newsVM)
         
-        newsVM.onDidTapItem = { [weak self, unowned navigationController] _ in
+        newsVM.onDidTapItem = { [weak self, unowned navigationController] currency in
             guard let weakself = self else { return }
-            weakself.pushInformationScreen(on: navigationController)
+            weakself.pushInformationScreen(on: navigationController, for: currency)
         }
         
         navigationController.navigationBar.coloured()
@@ -49,8 +49,8 @@ final class CryptocurrencyCoordinator: Coordinator {
         navigationController.setViewControllers([newsVC], animated: false)
     }
     
-    private func pushInformationScreen(on navigationController: UINavigationController) {
-        let informationVM = InformationVM()
+    private func pushInformationScreen(on navigationController: UINavigationController, for currency: Currency) {
+        let informationVM = InformationVM(currency: currency, cryptocurrencyManager: self.cryptocurrencyManager)
         let informationVC = InformationVC.instantiateStoryboardVC(viewModel: informationVM)
         
         navigationController.pushViewController(informationVC, animated: true)

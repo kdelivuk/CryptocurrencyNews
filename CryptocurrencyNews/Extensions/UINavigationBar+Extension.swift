@@ -14,7 +14,7 @@ extension UINavigationBar {
         
         backgroundColor = Color.white.withAlphaComponent(0.1)
         barTintColor = Color.white
-        tintColor = Color.main
+        tintColor = Color.green
         shadowImage = UIImage()
         setBackgroundImage(UIImage(), for: .default)
         isTranslucent = false

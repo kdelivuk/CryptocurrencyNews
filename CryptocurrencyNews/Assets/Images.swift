@@ -17,7 +17,9 @@ final class Images {
     
     // MARK: - Reusable icons
     
-    class var iconArrowDown: UIImage { return UIImage(named: "icon-arrow-down")!.withRenderingMode(.alwaysTemplate) }
+    class var iconArrowDown: UIImage { return UIImage(named: "icon-caret-down")!.withRenderingMode(.alwaysTemplate) }
+    class var iconArrowUp: UIImage { return UIImage(named: "icon-caret-up")!.withRenderingMode(.alwaysTemplate) }
+    
     class var iconCurrency: UIImage { return UIImage(named: "icon-currency")!.withRenderingMode(.alwaysOriginal) }
     class var iconLimit: UIImage { return UIImage(named: "icon-limit")!.withRenderingMode(.alwaysOriginal) }
 }

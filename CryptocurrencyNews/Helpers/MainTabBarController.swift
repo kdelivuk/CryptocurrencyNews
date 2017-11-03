@@ -21,7 +21,7 @@ class MainTabBarController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: Fonts.regular(size: 12)], for: .normal)
         
         tabBar.barTintColor = Color.white
-        tabBar.tintColor = Color.main
+        tabBar.tintColor = Color.green
         tabBar.backgroundColor = Color.white.withAlphaComponent(0.1)
         tabBar.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.1).cgColor
         tabBar.clipsToBounds = true

@@ -19,9 +19,9 @@ final class MainCoordinator: Coordinator {
     
     private let connector = Connector()
         
-    var cryptocurrencyManager: CryptocurrencyManager {
+    lazy var cryptocurrencyManager: CryptocurrencyManagerProtocol = {
         return CryptocurrencyManager(connector: self.connector)
-    }
+    }()
     
     override func start() {
         openLandingScreen(in: viewController)
@@ -39,13 +39,11 @@ final class MainCoordinator: Coordinator {
         
         cryptocurrencyNC.tabBarItem.title = "Cryptocurrency"
         cryptocurrencyNC.tabBarItem.image = Images.iconStock
-//        cryptocurrencyNC.tabBarItem.selectedImage =
         
         settingsNC.tabBarItem.title = "Settings"
         settingsNC.tabBarItem.image = Images.iconSettings
-//        settingsNC.tabBarItem.selectedImage =
         
-//        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: Colors.general], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: Color.green], for: .selected)
         
         tabBarController.setViewControllers([cryptocurrencyNC, settingsNC], animated: false)
         

@@ -38,58 +38,75 @@ class NewsVC: UIViewController {
         mainView.searchBar.delegate = self
         mainView.searchBar.resignFirstResponder()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        // reload signal
-        // refreshControl.endRefreshing()
-        
         bindViewModel()
         
-        viewModel.search(word: "")
+        viewModel.top()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
     private func bindViewModel() {
-        viewModel.stateObservable.subscribe(onNext: { [weak self] (viewModelState) in
-            guard let weakself = self else { return }
-            print("state")
-            switch viewModelState {
-            case .top:
-//                weakself.loaderVC?.stopAnimating()
-//                weakself.loaderVC?.removeFromParentViewController()
-//                weakself.loaderVC = nil
-                weakself.title = weakself.viewModel.title
-                weakself.mainView.tableView.backgroundView = nil
-                weakself.mainView.tableView.reloadData()
-            case .search(let searchState):
-                switch searchState {
-                case .empty:
-                    weakself.loaderVC?.stopAnimating()
-                    weakself.loaderVC?.removeFromParentViewController()
-                    weakself.loaderVC = nil
-                    weakself.mainView.tableView.backgroundView = weakself.emptyStateView
-                    weakself.mainView.tableView.reloadData()
-                case .searching:
-                    weakself.title = weakself.viewModel.title
-//                    weakself.loaderVC = FullScreenLoaderVC()
-//                    weakself.attachChildVC(weakself.loaderVC!)
-//                    weakself.loaderVC?.view.snp.makeConstraints({ (make) in
-//                        make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
-//                        make.left.right.equalTo(0)
-//                        make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
-//                    })
-                case .results(let results):
-                    weakself.loaderVC?.stopAnimating()
-                    weakself.loaderVC?.removeFromParentViewController()
-                    weakself.loaderVC = nil
+        viewModel
+            .stateObservable
+            .subscribe(onNext: { [weak self] (viewModelState) in
+                guard let weakself = self else { return }
+                print("state")
+                switch viewModelState {
+                case .top:
+                    //                weakself.loaderVC?.stopAnimating()
+                    //                weakself.loaderVC?.removeFromParentViewController()
+                    //                weakself.loaderVC = nil
                     weakself.mainView.tableView.backgroundView = nil
+                    // reload signal
+                    weakself.refreshControl.endRefreshing()
                     weakself.mainView.tableView.reloadData()
-                case .error(let error):
-                    ()
+                case .search(let searchState):
+                    switch searchState {
+                    case .empty:
+                        //                    weakself.loaderVC?.stopAnimating()
+                        //                    weakself.loaderVC?.removeFromParentViewController()
+                        //                    weakself.loaderVC = nil
+                        weakself.mainView.tableView.backgroundView = weakself.emptyStateView
+                        weakself.emptyStateView.configure(for: .noSearchResults)
+                        // reload signal
+                        weakself.refreshControl.endRefreshing()
+                        weakself.mainView.tableView.reloadData()
+                    case .searching: ()
+                        //                    weakself.loaderVC = FullScreenLoaderVC()
+                        //                    weakself.attachChildVC(weakself.loaderVC!)
+                        //                    weakself.loaderVC?.view.snp.makeConstraints({ (make) in
+                        //                        make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
+                        //                        make.left.right.equalTo(0)
+                        //                        make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
+                    //                    })
+                    case .results(let results):
+                        //                    weakself.loaderVC?.stopAnimating()
+                        //                    weakself.loaderVC?.removeFromParentViewController()
+                        //                    weakself.loaderVC = nil
+                        weakself.mainView.tableView.backgroundView = nil
+                        // reload signal
+                        weakself.refreshControl.endRefreshing()
+                        weakself.mainView.tableView.reloadData()
+                    case .error(let error):
+                        // reload signal
+                        weakself.refreshControl.endRefreshing()
+                        weakself.mainView.tableView.reloadData()
+                    }
                 }
-                
-            }
-        }).disposed(by: viewModel.disposeBag)
+            }).disposed(by: viewModel.disposeBag)
+        
+        viewModel
+            .titleObservable
+            .subscribe(onNext: { [weak self] title in
+                guard let weakself = self else { return }
+                weakself.title = title
+            }).disposed(by: viewModel.disposeBag)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -111,20 +128,24 @@ class NewsVC: UIViewController {
         let tabbarHeight = tabBarController?.tabBar.frame.size.height ?? 0
         
         keyboardHeight = keyboardSize.height - tabbarHeight
-        
-        // let currentState = viewModel.state
-        
-        // if currentState == .search {
-        //        configureViewForKeyboardWillShowAction(with: keyboardHeight ?? 0)
-        //        }
+
+        configureViewForKeyboardWillShowAction(with: keyboardHeight ?? 0)
     }
     
     @objc fileprivate func keyboardWillHide(notification: NSNotification) {
-        //        configureViewForKeyboardWillHideAction(with: keyboardHeight ?? 0)
+        configureViewForKeyboardWillHideAction(with: keyboardHeight ?? 0)
     }
     
     @objc fileprivate func pullToRefreshAction(sender: UIRefreshControl) {
-        // viewModel.getData()
+        viewModel.search(word: mainView.searchBar.text ?? "")
+    }
+    
+    private func configureViewForKeyboardWillShowAction(with size: CGFloat) {
+        mainView.tableViewBottomConstraint.constant += size
+    }
+    
+    private func configureViewForKeyboardWillHideAction(with size: CGFloat) {
+        mainView.tableViewBottomConstraint.constant -= size
     }
 }
 
@@ -137,8 +158,9 @@ extension NewsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(for: indexPath, type: NewsCell.self)
         let currency = viewModel.item(for: indexPath)
+        let priceInFiat = viewModel.priceInFiat
         
-        cell.configure(currency: currency)
+        cell.configure(currency: currency, priceInFiat: priceInFiat)
         
         return cell
     }
@@ -157,9 +179,16 @@ extension NewsVC: UISearchBarDelegate {
         return true
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         mainView.searchBar.clear()
-
+        viewModel.top()
+        
         navigationController?.setNavigationBarHidden(false, animated: true)
         searchBar.showsCancelButton = false
         searchBar.resignFirstResponder()

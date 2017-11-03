@@ -6,9 +6,10 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
-import Foundation
+import Defines
 
-public struct Cryptocurrency: JSONDecodable {
+public struct Cryptocurrency {
+
     public let id: String
     public let name: String
     public let symbol: String
@@ -19,22 +20,22 @@ public struct Cryptocurrency: JSONDecodable {
     public let market_cap_usd: String
     public let available_supply: String
     public let total_supply: String
-    public let percent_change_1h: String
+    public let percent_change_1h: Double
     public let percent_change_24h: Double
-    public let percent_change_7d: String
+    public let percent_change_7d: Double
     public let last_updated: String
     
-    init?(jsonDict: [String: Any]) {
+    init?(jsonDict: [String: Any], currency: FiatCurrency) {
         
         guard
             let id = jsonDict["id"] as? String,
             let name = jsonDict["name"] as? String,
             let symbol = jsonDict["symbol"] as? String,
             let rank = jsonDict["rank"] as? String,
-            let price_usd = jsonDict["price_usd"] as? String,
+            let price_usd = jsonDict["price_\(currency.rawValue)"] as? String,
             let price_btc = jsonDict["price_btc"] as? String,
-            let h24_volume_usd = jsonDict["24h_volume_usd"] as? String,
-            let market_cap_usd = jsonDict["market_cap_usd"] as? String,
+            let h24_volume_usd = jsonDict["24h_volume_\(currency.rawValue)"] as? String,
+            let market_cap_usd = jsonDict["market_cap_\(currency.rawValue)"] as? String,
             let available_supply = jsonDict["available_supply"] as? String,
             let total_supply = jsonDict["total_supply"] as? String,
             let percent_change_1h = jsonDict["percent_change_1h"] as? String,
@@ -55,9 +56,9 @@ public struct Cryptocurrency: JSONDecodable {
         self.market_cap_usd = market_cap_usd
         self.available_supply = available_supply
         self.total_supply = total_supply
-        self.percent_change_1h = percent_change_1h
+        self.percent_change_1h = Double(percent_change_1h) ?? 0.0
         self.percent_change_24h = Double(percent_change_24h) ?? 0.0
-        self.percent_change_7d = percent_change_7d
+        self.percent_change_7d = Double(percent_change_7d) ?? 0.0
         self.last_updated = last_updated
     }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -87,17 +88,36 @@
                                                 <rect key="frame" x="0.0" y="25.5" width="244.5" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="751" text="24h value change:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZo-9G-nbn" userLabel="24">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="change" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhm-9g-fHT">
-                                                        <rect key="frame" x="187.5" y="0.0" width="57" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmp-FY-vNd">
+                                                        <rect key="frame" x="170.5" y="4.5" width="74" height="12"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="change" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhm-9g-fHT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="57" height="12"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-0D-SJs">
+                                                                <rect key="frame" x="57" y="0.0" width="5" height="12"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="5" id="NZs-ab-G9T"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PtM-1d-plW">
+                                                                <rect key="frame" x="62" y="0.0" width="12" height="12"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="12" id="DnG-nI-1U8"/>
+                                                                    <constraint firstAttribute="width" secondItem="PtM-1d-plW" secondAttribute="height" multiplier="1:1" id="xnK-gd-aVQ"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -126,6 +146,7 @@
                 <outlet property="priceInFiatTitleLabel" destination="szE-nL-CKK" id="ZT9-MS-PBn"/>
                 <outlet property="rankLabel" destination="2v2-lp-dg9" id="zgS-6f-oOA"/>
                 <outlet property="symbolLabel" destination="S2a-xT-M1R" id="vZa-Em-7xL"/>
+                <outlet property="valutChangeImageView" destination="PtM-1d-plW" id="QLT-5N-ztl"/>
                 <outlet property="valutChangeLabel" destination="yhm-9g-fHT" id="RRG-El-0KQ"/>
                 <outlet property="valutChangeTitleLabel" destination="cZo-9G-nbn" id="3IT-VK-K7s"/>
             </connections>
