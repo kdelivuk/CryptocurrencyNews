@@ -12,6 +12,7 @@ import Alamofire
 enum Router {
     
     case getCriptocurrencies(limit: Int, convert: FiatCurrency)
+    case getCriptocurrency(id: String, convert: FiatCurrency)
     
     fileprivate var baseURL: URL {
         return URL(string: "https://api.coinmarketcap.com/v1/")!
@@ -21,19 +22,21 @@ enum Router {
         switch self {
         case .getCriptocurrencies:
             return "ticker/"
+        case .getCriptocurrency(let id, _):
+            return "ticker/\(id)"
         }
     }
     
     var method: HTTPMethod {
         switch self {
-        case .getCriptocurrencies:
+        case .getCriptocurrencies, .getCriptocurrency:
             return .get
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .getCriptocurrencies:
+        case .getCriptocurrencies, .getCriptocurrency:
             return URLEncoding.default
         }
     }
@@ -43,6 +46,10 @@ enum Router {
         case .getCriptocurrencies(let limit, let currency):
             return [
                 "limit": limit,
+                "convert": currency.rawValue.uppercased()
+            ]
+        case .getCriptocurrency(let id, let currency):
+            return [
                 "convert": currency.rawValue.uppercased()
             ]
         }

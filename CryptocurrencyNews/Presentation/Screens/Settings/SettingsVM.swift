@@ -53,12 +53,12 @@ final class SettingsVM: SettingsVMProtocol {
     private var _selectedCurrency: Variable<FiatCurrency>
     private var _limit: Variable<Int>
     
-    private let cryptocurrencyManager: CryptocurrencyManager
+    private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     private let disposeBag: DisposeBag
     
     // MARK: - Class lifecycle
     
-    init(cryptocurrencyManager: CryptocurrencyManager) {
+    init(cryptocurrencyManager: CryptocurrencyManagerProtocol) {
         self.cryptocurrencyManager = cryptocurrencyManager
         self.initialFiatCurrency = cryptocurrencyManager.fiatCurrency
         
@@ -76,14 +76,16 @@ final class SettingsVM: SettingsVMProtocol {
         
         cryptocurrencyManager
             .fiatCurrencyObservable
-            .subscribe(onNext: { (currency) in
-                self._selectedCurrency.value = currency
+            .subscribe(onNext: { [weak self] currency in
+                guard let weakself = self else { return }
+                weakself._selectedCurrency.value = currency
             }).disposed(by: disposeBag)
         
         cryptocurrencyManager
             .limitObservable
-            .subscribe(onNext: { (limit) in
-                self._limit.value = limit
+            .subscribe(onNext: { [weak self] limit in
+                guard let weakself = self else { return }
+                weakself._limit.value = limit
             }).disposed(by: disposeBag)
     }
     

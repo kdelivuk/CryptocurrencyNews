@@ -16,12 +16,15 @@ class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
     @IBOutlet weak var priceInFiatTitleLabel: UILabel!
     @IBOutlet private weak var priceInFiatLabel: UILabel!
     
+    @IBOutlet weak var valutChangeImageView: UIImageView!
     
     @IBOutlet weak var valutChangeTitleLabel: UILabel!
     @IBOutlet private weak var valutChangeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        valutChangeImageView.contentMode = .scaleAspectFill
         
         rankLabel.font = Fonts.bold(size: 26)
         rankLabel.textColor = Color.black
@@ -61,18 +64,24 @@ class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
         symbolLabel.text = ""
         priceInFiatLabel.text = ""
         valutChangeLabel.text = ""
+        valutChangeImageView.image = nil
     }
     
-    func configure(currency: Currency) {
+    func configure(currency: Currency, priceInFiat: String) {
         rankLabel.text = currency.rank
         symbolLabel.text = currency.name
         priceInFiatLabel.text = currency.priceInFiat
         valutChangeLabel.text = "\(currency.changeIn24h * 100)%"
+        priceInFiatTitleLabel.text = priceInFiat
         
         if currency.changeIn24h > 0.0 {
-            valutChangeLabel.textColor = .green
+            valutChangeLabel.textColor = Color.green
+            valutChangeImageView.image = Images.iconArrowUp
+            valutChangeImageView.tintColor = Color.green
         } else {
-            valutChangeLabel.textColor = .red
+            valutChangeLabel.textColor = Color.red
+            valutChangeImageView.image = Images.iconArrowDown
+            valutChangeImageView.tintColor = Color.red
         }
     }
 }

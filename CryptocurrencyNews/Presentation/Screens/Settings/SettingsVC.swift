@@ -179,6 +179,10 @@ extension SettingsVC: InputAccessoryViewDelegate {
         guard let currentTextField = currentTextField else { return }
         currentTextField.resignFirstResponder()
         
+        if currentTextField == mainTableView.limitTextField {
+            viewModel.changeLimit(to: mainTableView.limitTextField.text ?? "")
+        }
+        
         self.currentTextField = nil
     }
 }

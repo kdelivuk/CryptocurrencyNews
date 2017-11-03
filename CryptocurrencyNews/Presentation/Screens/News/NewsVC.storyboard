@@ -44,6 +44,7 @@
                         <connections>
                             <outlet property="searchBar" destination="LdT-eu-k5n" id="KKT-UM-Nb6"/>
                             <outlet property="tableView" destination="iJs-ma-lyr" id="Icd-fx-wIM"/>
+                            <outlet property="tableViewBottomConstraint" destination="STe-N8-wwQ" id="KfS-cI-wg6"/>
                         </connections>
                     </view>
                 </viewController>

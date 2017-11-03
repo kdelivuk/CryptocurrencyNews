@@ -13,11 +13,11 @@ final class SettingsCoordinator: Coordinator {
     // MARK: - Private Properties
     
     private let navigationController: UINavigationController
-    private let cryptocurrencyManager: CryptocurrencyManager
+    private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     
     // MARK: - Coordinator Lifecycle
     
-    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManager) {
+    init(in navigationController: UINavigationController, viewController: UIViewController, cryptocurrencyManager: CryptocurrencyManagerProtocol) {
         self.cryptocurrencyManager = cryptocurrencyManager
         self.navigationController = navigationController
         super.init(in: viewController)

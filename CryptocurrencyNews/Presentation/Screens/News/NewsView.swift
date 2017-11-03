@@ -13,10 +13,14 @@ class NewsView: UIView {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         searchBar.searchBarStyle = UISearchBarStyle.minimal
+        searchBar.tintColor = Color.green
+
         searchBar.placeholder = NSLocalizedString("Search", comment: "NewsView.searchBar.placeholder")
     }
 }

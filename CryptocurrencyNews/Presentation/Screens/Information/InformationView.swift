@@ -10,6 +10,8 @@ import UIKit
 
 class InformationView: UIView {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

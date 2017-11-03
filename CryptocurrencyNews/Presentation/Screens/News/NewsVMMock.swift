@@ -10,6 +10,10 @@ import RxSwift
 
 final class NewsVMMock: NewsVMProtocol {
     
+    var titleObservable = Observable<String>.empty()
+    
+    var priceInFiat: String  = "Price in fiat"
+    
     var title: String = "Top 100"
     
     let disposeBag: DisposeBag
@@ -82,27 +86,31 @@ final class NewsVMMock: NewsVMProtocol {
             _state.value = NewsVMState.top(items)
         }
     }
+    
+    func top() {
+        
+    }
 }
 
 struct CurrencyMock {
     
     static private var currencies: [Currency] = [
-        Currency(rank: "1", name: "bitcoin", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "2", name: "ethereum", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "3", name: "ripple", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "4", name: "bitcoin-cash", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "5", name: "litecoin", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "6", name: "dash", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "7", name: "neo", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "8", name: "bitconnect", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "9", name: "monero", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "10", name: "iota", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "11", name: "ethereum-classic", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "12", name: "qtum", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "13", name: "cardano", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "14", name: "stellar", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "15", name: "lisk", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
-        Currency(rank: "16", name: "zcash", priceInFiat: "5738.89", changeIn24h: 3113190000.0)
+//        Currency(rank: "1", name: "bitcoin", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "2", name: "ethereum", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "3", name: "ripple", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "4", name: "bitcoin-cash", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "5", name: "litecoin", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "6", name: "dash", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "7", name: "neo", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "8", name: "bitconnect", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "9", name: "monero", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "10", name: "iota", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "11", name: "ethereum-classic", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "12", name: "qtum", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "13", name: "cardano", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "14", name: "stellar", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "15", name: "lisk", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
+//        Currency(rank: "16", name: "zcash", priceInFiat: "5738.89", changeIn24h: 3113190000.0)
     ]
     
     static func generateData() -> [Currency] {

@@ -18,7 +18,11 @@ protocol CryptocurrencyManagerProtocol {
     var limit: Int { get }
     var fiatCurrency: FiatCurrency { get }
     
-    func search() -> Observable<[Cryptocurrency]>
+    func top() -> Observable<[Cryptocurrency]>
+    func currency(for id: String) -> Observable<Cryptocurrency>
+    
+    func setLimit(_ newLimit: Int)
+    func setFiatCurrency(_ newCurrency: FiatCurrency)
 }
 
 class CryptocurrencyManager: CryptocurrencyManagerProtocol {
@@ -72,7 +76,7 @@ class CryptocurrencyManager: CryptocurrencyManagerProtocol {
         _fiatCurrency = Variable(FiatCurrency(rawValue: UserDefaults.standard.string(forKey: Constants.currencyKey)!)!)
     }
     
-    func search() -> Observable<[Cryptocurrency]> {
+    func top() -> Observable<[Cryptocurrency]> {
         return connector
             .getCryptocurrencies(limit: _limit.value, in: _fiatCurrency.value)
             .map { (result) -> [Cryptocurrency] in
@@ -85,11 +89,25 @@ class CryptocurrencyManager: CryptocurrencyManagerProtocol {
         }
     }
     
+    func currency(for id: String) -> Observable<Cryptocurrency> {
+        return connector
+            .getCryptocurrency(for: id, in: _fiatCurrency.value)
+            .map { (result) -> Cryptocurrency in
+                switch result {
+                case .success(let cryptocurrency):
+                    return cryptocurrency
+                case .error(let error):
+                    throw error
+                }
+        }
+    }
+    
     func setLimit(_ newLimit: Int) {
         if newLimit != _limit.value {
             UserDefaults.standard.set(newLimit, forKey: Constants.limitKey)
             UserDefaults.standard.synchronize()
             _limit.value = newLimit
+            print(_limit.value)
         }
     }
     
@@ -98,6 +116,11 @@ class CryptocurrencyManager: CryptocurrencyManagerProtocol {
             UserDefaults.standard.set(newCurrency.rawValue, forKey: Constants.currencyKey)
             UserDefaults.standard.synchronize()
             _fiatCurrency.value = newCurrency
+            print(_fiatCurrency.value)
         }
+    }
+    
+    deinit {
+        print("\(self) DEINIT")
     }
 }
