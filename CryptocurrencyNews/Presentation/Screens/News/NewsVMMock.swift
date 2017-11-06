@@ -65,7 +65,7 @@ final class NewsVMMock: NewsVMProtocol {
         
         // if there are more than 0 characters currently
         // present in the searchbar
-        if word.characters.count > 0 {
+        if word.count > 0 {
         
             // query through all the mock items and find ones that contain search word
             items = CurrencyMock.generateData().filter({$0.name.lowercased().contains(word.lowercased())})

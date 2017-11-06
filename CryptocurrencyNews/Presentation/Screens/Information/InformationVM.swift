@@ -66,7 +66,7 @@ final class InformationVM: InformationVMProtocol {
                 switch currency {
                 case .next(let currency):
                     self.concurrencyInformation = [.rank, .name, .symbol, .priceInFiat(self.cryptocurrencyManager.fiatCurrency), .priceInBitcoin, .changeIn1h, .changeIn24h, .changeIn1h, .availableSupply, .totalSupply]
-                    self.currency = Currency(id: currency.id, rank: currency.rank, name: currency.name, symbol: currency.symbol, priceInFiat: currency.price_usd, priceInBitcoin: currency.price_btc, changeIn1h: currency.percent_change_1h, changeIn24h: currency.percent_change_24h, changeIn7d: currency.percent_change_7d, availableSupply: currency.available_supply, totalSupply: currency.total_supply)
+                    self.currency = Currency(id: currency.id, rank: currency.rank, name: currency.name, symbol: currency.symbol, priceInFiat: currency.price_fiat, priceInBitcoin: currency.price_btc, changeIn1h: currency.percent_change_1h, changeIn24h: currency.percent_change_24h, changeIn7d: currency.percent_change_7d, availableSupply: currency.available_supply, totalSupply: currency.total_supply)
                 case .error(_):
                     self._state.value = .error
                 case .completed:

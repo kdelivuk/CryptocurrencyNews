@@ -48,7 +48,7 @@ enum Router {
                 "limit": limit,
                 "convert": currency.rawValue.uppercased()
             ]
-        case .getCriptocurrency(let id, let currency):
+        case .getCriptocurrency(_, let currency):
             return [
                 "convert": currency.rawValue.uppercased()
             ]
