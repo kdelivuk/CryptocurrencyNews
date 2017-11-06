@@ -19,6 +19,13 @@ target 'CryptocurrencyNews' do
       pod 'RxSwift'
   end
   
+  target 'CryptocurrencyNewsTests' do
+      use_frameworks!
+      
+      pod 'RxSwift'
+      pod 'RxBlocking'
+  end
+  
   target 'APITests' do
       use_frameworks!
       
