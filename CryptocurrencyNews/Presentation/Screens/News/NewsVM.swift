@@ -115,7 +115,7 @@ final class NewsVM: NewsVMProtocol {
             .top()
             .subscribe(onNext: { [weak self] currencies in
                 guard let weakself = self else { return }
-                weakself.criptocurrencies = currencies.map { Currency(id: $0.id, rank: $0.rank, name: $0.name, symbol: $0.symbol, priceInFiat: $0.price_usd, priceInBitcoin: $0.price_btc, changeIn1h: $0.percent_change_1h, changeIn24h: $0.percent_change_24h, changeIn7d: $0.percent_change_7d, availableSupply: $0.available_supply, totalSupply: $0.total_supply) }
+                weakself.criptocurrencies = currencies.map { Currency(id: $0.id, rank: $0.rank, name: $0.name, symbol: $0.symbol, priceInFiat: $0.price_fiat, priceInBitcoin: $0.price_btc, changeIn1h: $0.percent_change_1h, changeIn24h: $0.percent_change_24h, changeIn7d: $0.percent_change_7d, availableSupply: $0.available_supply, totalSupply: $0.total_supply) }
                 weakself.filteredCriptocurrencies = weakself.criptocurrencies
                 weakself._title.value = NSLocalizedString("Top \(weakself.cryptocurrencyManager.limit)", comment: "")
                 weakself._state.value = NewsVMState.top(weakself.filteredCriptocurrencies)

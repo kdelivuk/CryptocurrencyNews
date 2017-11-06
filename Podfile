@@ -10,12 +10,21 @@ target 'CryptocurrencyNews' do
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxBlocking'
   
   target 'API' do
       use_frameworks!
       
       pod 'Alamofire'
       pod 'RxSwift'
+  end
+  
+  target 'APITests' do
+      use_frameworks!
+      
+      pod 'Alamofire'
+      pod 'RxSwift'
+      pod 'RxBlocking'
   end
   
 end
