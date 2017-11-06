@@ -8,9 +8,32 @@
 
 import RxSwift
 
-enum NewsVMState {
+enum NewsVMState: RawRepresentable {
+    
+    typealias RawValue = String
+    
+    var rawValue: String {
+        switch self {
+        case .top(_):
+            return "top"
+        case .search(_):
+            return "search"
+        }
+    }
+    
     case top([Currency])
     case search(SearchResultState)
+    
+    init?(rawValue: String) {
+        switch rawValue {
+        case "top":
+            self = .top([])
+        case "search":
+            self = .search(SearchResultState.empty)
+        default:
+            return nil
+        }
+    }
 }
 
 enum SearchResultState {

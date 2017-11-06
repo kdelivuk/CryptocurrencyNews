@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0910"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "650120DE1F9DCA1200537214"
-               BuildableName = "CryptocurrencyNews.app"
-               BlueprintName = "CryptocurrencyNews"
-               ReferencedContainer = "container:CryptocurrencyNews.xcodeproj">
+               BlueprintIdentifier = "468C7431C7FCA34391F59B0D6EBB1923"
+               BuildableName = "Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework"
+               BlueprintName = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,26 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65CEE45C1FB1019E004A0B81"
-               BuildableName = "CryptocurrencyNewsTests.xctest"
-               BlueprintName = "CryptocurrencyNewsTests"
-               ReferencedContainer = "container:CryptocurrencyNews.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650120DE1F9DCA1200537214"
-            BuildableName = "CryptocurrencyNews.app"
-            BlueprintName = "CryptocurrencyNews"
-            ReferencedContainer = "container:CryptocurrencyNews.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -63,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650120DE1F9DCA1200537214"
-            BuildableName = "CryptocurrencyNews.app"
-            BlueprintName = "CryptocurrencyNews"
-            ReferencedContainer = "container:CryptocurrencyNews.xcodeproj">
+            BlueprintIdentifier = "468C7431C7FCA34391F59B0D6EBB1923"
+            BuildableName = "Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework"
+            BlueprintName = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -82,16 +62,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "650120DE1F9DCA1200537214"
-            BuildableName = "CryptocurrencyNews.app"
-            BlueprintName = "CryptocurrencyNews"
-            ReferencedContainer = "container:CryptocurrencyNews.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

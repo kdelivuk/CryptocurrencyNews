@@ -46,7 +46,7 @@ final class NewsVM: NewsVMProtocol {
         criptocurrencies = []
         filteredCriptocurrencies = []
         _title = Variable(NSLocalizedString("Top \(cryptocurrencyManager.limit)", comment: ""))
-        priceInFiat = "Prince in \(cryptocurrencyManager.fiatCurrency)"
+        priceInFiat = "Price in \(cryptocurrencyManager.fiatCurrency.title())"
         
         cryptocurrencyManager
             .limitObservable

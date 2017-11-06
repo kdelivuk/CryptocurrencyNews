@@ -40,7 +40,7 @@ final class InformationVM: InformationVMProtocol {
         self.currency = currency
         self._state = Variable(InformationVMState.finished)
         self.cryptocurrencyManager = cryptocurrencyManager
-        self.concurrencyInformation = [.rank, .name, .symbol, .priceInFiat(cryptocurrencyManager.fiatCurrency), .priceInBitcoin, .changeIn1h, .changeIn24h, .changeIn1h, .availableSupply, .totalSupply]
+        self.concurrencyInformation = [.rank, .name, .symbol, .priceInFiat(cryptocurrencyManager.fiatCurrency), .priceInBitcoin, .changeIn1h, .changeIn24h, .changeIn7d, .availableSupply, .totalSupply]
         
         self.cryptocurrencyManager
             .fiatCurrencyObservable
