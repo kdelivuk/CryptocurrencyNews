@@ -6,6 +6,7 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
+import Defines
 import UIKit
 
 class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
@@ -67,7 +68,7 @@ class NewsCell: UITableViewCell, ReusableView, NibLoadableView {
         valutChangeImageView.image = nil
     }
     
-    func configure(currency: Currency, priceInFiat: String) {
+    func configure(currency: Cryptocurrency, priceInFiat: String) {
         rankLabel.text = currency.rank
         symbolLabel.text = currency.name
         priceInFiatLabel.text = currency.priceInFiat

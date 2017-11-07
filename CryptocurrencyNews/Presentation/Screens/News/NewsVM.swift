@@ -6,13 +6,14 @@
 //  Copyright © 2017 Kristijan Delivuk. All rights reserved.
 //
 
+import Defines
 import RxSwift
 
 final class NewsVM: NewsVMProtocol {
     
     // MARK: - Coordinator Actions
     
-    var onDidTapItem: ((Currency) -> ()) = { _ in }
+    var onDidTapItem: ((Cryptocurrency) -> ()) = { _ in }
     
     // MARK: - Public Properties
     
@@ -31,8 +32,8 @@ final class NewsVM: NewsVMProtocol {
     
     // MARK: - Private Properties
     
-    private var criptocurrencies: [Currency]
-    private var filteredCriptocurrencies: [Currency]
+    private var criptocurrencies: [Cryptocurrency]
+    private var filteredCriptocurrencies: [Cryptocurrency]
     private let _state: Variable<NewsVMState>
     
     private let cryptocurrencyManager: CryptocurrencyManagerProtocol
@@ -115,7 +116,7 @@ final class NewsVM: NewsVMProtocol {
             .top()
             .subscribe(onNext: { [weak self] currencies in
                 guard let weakself = self else { return }
-                weakself.criptocurrencies = currencies.map { Currency(id: $0.id, rank: $0.rank, name: $0.name, symbol: $0.symbol, priceInFiat: $0.price_fiat, priceInBitcoin: $0.price_btc, changeIn1h: $0.percent_change_1h, changeIn24h: $0.percent_change_24h, changeIn7d: $0.percent_change_7d, availableSupply: $0.available_supply, totalSupply: $0.total_supply) }
+                weakself.criptocurrencies = currencies
                 weakself.filteredCriptocurrencies = weakself.criptocurrencies
                 weakself._title.value = NSLocalizedString("Top \(weakself.cryptocurrencyManager.limit)", comment: "")
                 weakself._state.value = NewsVMState.top(weakself.filteredCriptocurrencies)
@@ -128,7 +129,7 @@ final class NewsVM: NewsVMProtocol {
     
     // MARK: - Public Methods
     
-    func item(for indexPath: IndexPath) -> Currency {
+    func item(for indexPath: IndexPath) -> Cryptocurrency {
         return filteredCriptocurrencies[indexPath.row]
     }
     
