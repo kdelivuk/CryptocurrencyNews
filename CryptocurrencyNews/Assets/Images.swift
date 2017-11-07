@@ -22,4 +22,6 @@ final class Images {
     
     class var iconCurrency: UIImage { return UIImage(named: "icon-currency")!.withRenderingMode(.alwaysOriginal) }
     class var iconLimit: UIImage { return UIImage(named: "icon-limit")!.withRenderingMode(.alwaysOriginal) }
+    
+    class var iconSearch: UIImage { return UIImage(named: "icon-search")!.withRenderingMode(.alwaysOriginal) }
 }
