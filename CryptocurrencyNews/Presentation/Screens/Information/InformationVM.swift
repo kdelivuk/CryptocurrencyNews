@@ -22,7 +22,7 @@ final class InformationVM: InformationVMProtocol {
     let _state: Variable<InformationVMState>
     lazy var stateObservable: Observable<InformationVMState> = self._state.asObservable().throttle(0.5, scheduler: MainScheduler.instance)
     
-    private var currency: Currency
+    private var currency: Cryptocurrency
     private let cryptocurrencyManager: CryptocurrencyManagerProtocol
     
     private var concurrencyInformation: [ConcurrencyInformation]
@@ -35,7 +35,7 @@ final class InformationVM: InformationVMProtocol {
         return concurrencyInformation.count
     }
     
-    init(currency: Currency, cryptocurrencyManager: CryptocurrencyManagerProtocol) {
+    init(currency: Cryptocurrency, cryptocurrencyManager: CryptocurrencyManagerProtocol) {
         self.disposeBag = DisposeBag()
         self.currency = currency
         self._state = Variable(InformationVMState.finished)
@@ -66,7 +66,7 @@ final class InformationVM: InformationVMProtocol {
                 switch currency {
                 case .next(let currency):
                     self.concurrencyInformation = [.rank, .name, .symbol, .priceInFiat(self.cryptocurrencyManager.fiatCurrency), .priceInBitcoin, .changeIn1h, .changeIn24h, .changeIn1h, .availableSupply, .totalSupply]
-                    self.currency = Currency(id: currency.id, rank: currency.rank, name: currency.name, symbol: currency.symbol, priceInFiat: currency.price_fiat, priceInBitcoin: currency.price_btc, changeIn1h: currency.percent_change_1h, changeIn24h: currency.percent_change_24h, changeIn7d: currency.percent_change_7d, availableSupply: currency.available_supply, totalSupply: currency.total_supply)
+                    self.currency = currency
                 case .error(_):
                     self._state.value = .error
                 case .completed:
@@ -108,7 +108,7 @@ extension ConcurrencyInformation {
 }
 
 extension ConcurrencyInformation {
-    func value(for currency: Currency) -> String {
+    func value(for currency: Cryptocurrency) -> String {
         switch self {
         case .rank:
             return currency.rank
@@ -119,7 +119,7 @@ extension ConcurrencyInformation {
         case .priceInFiat:
             return currency.priceInFiat
         case .priceInBitcoin:
-            return currency.priceInBitcoin
+            return currency.priceInBtc
         case .changeIn1h:
             return "\(currency.changeIn1h*100)%"
         case .changeIn7d:

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Defines
 
 final class CryptocurrencyCoordinator: Coordinator {
     
@@ -49,7 +50,7 @@ final class CryptocurrencyCoordinator: Coordinator {
         navigationController.setViewControllers([newsVC], animated: false)
     }
     
-    private func pushInformationScreen(on navigationController: UINavigationController, for currency: Currency) {
+    private func pushInformationScreen(on navigationController: UINavigationController, for currency: Cryptocurrency) {
         let informationVM = InformationVM(currency: currency, cryptocurrencyManager: self.cryptocurrencyManager)
         let informationVC = InformationVC.instantiateStoryboardVC(viewModel: informationVM)
         

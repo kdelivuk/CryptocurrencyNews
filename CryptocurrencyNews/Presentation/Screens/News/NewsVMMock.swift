@@ -7,6 +7,7 @@
 //
 
 import RxSwift
+import Defines
 
 final class NewsVMMock: NewsVMProtocol {
     
@@ -20,7 +21,7 @@ final class NewsVMMock: NewsVMProtocol {
     
     // MARK: - Coordinator Actions
     
-    var onDidTapItem: ((Currency) -> ()) = { _ in }
+    var onDidTapItem: ((Cryptocurrency) -> ()) = { _ in }
     
     // MARK: - Public Properties
     
@@ -32,7 +33,7 @@ final class NewsVMMock: NewsVMProtocol {
     
     // MARK: - Private Properties
     
-    private var items: [Currency]
+    private var items: [Cryptocurrency]
     private let _state: Variable<NewsVMState>
     
     // MARK: - Class Lifecycle
@@ -45,7 +46,7 @@ final class NewsVMMock: NewsVMProtocol {
     
     // MARK: - Public Methods
     
-    func item(for indexPath: IndexPath) -> Currency {
+    func item(for indexPath: IndexPath) -> Cryptocurrency {
         return items[indexPath.row]
     }
     
@@ -94,7 +95,7 @@ final class NewsVMMock: NewsVMProtocol {
 
 struct CurrencyMock {
     
-    static private var currencies: [Currency] = [
+    static private var currencies: [Cryptocurrency] = [
 //        Currency(rank: "1", name: "bitcoin", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
 //        Currency(rank: "2", name: "ethereum", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
 //        Currency(rank: "3", name: "ripple", priceInFiat: "5738.89", changeIn24h: 3113190000.0),
@@ -113,7 +114,7 @@ struct CurrencyMock {
 //        Currency(rank: "16", name: "zcash", priceInFiat: "5738.89", changeIn24h: 3113190000.0)
     ]
     
-    static func generateData() -> [Currency] {
+    static func generateData() -> [Cryptocurrency] {
         return currencies
     }
 }

@@ -34,8 +34,9 @@
 		657142411FB1030C00B6A1F4 /* NewsVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657142401FB1030C00B6A1F4 /* NewsVMTests.swift */; };
 		6584D8051FA1C73E00FA0E46 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */; };
 		6584D8071FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */; };
-		659CB7D81FA3281F000B03F2 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659CB7D71FA3281F000B03F2 /* Cryptocurrency.swift */; };
+		659CB7D81FA3281F000B03F2 /* Cryptocurrency+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659CB7D71FA3281F000B03F2 /* Cryptocurrency+Extension.swift */; };
 		659CB7DC1FA32A7B000B03F2 /* Connector+CryptocurrencyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659CB7DB1FA32A7B000B03F2 /* Connector+CryptocurrencyType.swift */; };
+		65A49EE91FB193980057330F /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A49EE81FB193980057330F /* Cryptocurrency.swift */; };
 		65ABFE1F1FABB4AE008686AA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABFE1E1FABB4AE008686AA /* InformationCell.swift */; };
 		65ABFE211FABB4B6008686AA /* InformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ABFE201FABB4B6008686AA /* InformationCell.xib */; };
 		65BEF9911F9F730C005B6389 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BEF9901F9F730C005B6389 /* UIColor+Extension.swift */; };
@@ -159,8 +160,9 @@
 		657142401FB1030C00B6A1F4 /* NewsVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVMTests.swift; sourceTree = "<group>"; };
 		6584D8041FA1C73E00FA0E46 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		6584D8061FA1C7DA00FA0E46 /* FullScreenLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenLoaderVC.swift; sourceTree = "<group>"; };
-		659CB7D71FA3281F000B03F2 /* Cryptocurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = "<group>"; };
+		659CB7D71FA3281F000B03F2 /* Cryptocurrency+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cryptocurrency+Extension.swift"; sourceTree = "<group>"; };
 		659CB7DB1FA32A7B000B03F2 /* Connector+CryptocurrencyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Connector+CryptocurrencyType.swift"; sourceTree = "<group>"; };
+		65A49EE81FB193980057330F /* Cryptocurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = "<group>"; };
 		65ABFE1E1FABB4AE008686AA /* InformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 		65ABFE201FABB4B6008686AA /* InformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationCell.xib; sourceTree = "<group>"; };
 		65BEF9901F9F730C005B6389 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		650A5BE11FA91A030091A98C /* Defines */ = {
 			isa = PBXGroup;
 			children = (
+				65A49EE71FB1938C0057330F /* Models */,
 				650A5BEC1FA91A180091A98C /* Enums */,
 				650A5BE21FA91A030091A98C /* Defines.h */,
 				650A5BE31FA91A030091A98C /* Info.plist */,
@@ -364,6 +367,14 @@
 				6551C7D01FB107640078247C /* InformationVMTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65A49EE71FB1938C0057330F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65A49EE81FB193980057330F /* Cryptocurrency.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		65ABFE1D1FABB499008686AA /* Views */ = {
@@ -504,7 +515,7 @@
 			children = (
 				65DD0F551F9F25C900CC665A /* APIError.swift */,
 				65DD0F571F9F25D200CC665A /* APIResult.swift */,
-				659CB7D71FA3281F000B03F2 /* Cryptocurrency.swift */,
+				659CB7D71FA3281F000B03F2 /* Cryptocurrency+Extension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1038,6 +1049,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				650A5BEE1FA91A230091A98C /* FiatCurrency.swift in Sources */,
+				65A49EE91FB193980057330F /* Cryptocurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,7 +1069,7 @@
 			files = (
 				65DD0F501F9F257F00CC665A /* Router.swift in Sources */,
 				659CB7DC1FA32A7B000B03F2 /* Connector+CryptocurrencyType.swift in Sources */,
-				659CB7D81FA3281F000B03F2 /* Cryptocurrency.swift in Sources */,
+				659CB7D81FA3281F000B03F2 /* Cryptocurrency+Extension.swift in Sources */,
 				65DD0F4E1F9F257800CC665A /* Connector.swift in Sources */,
 				65DD0F561F9F25C900CC665A /* APIError.swift in Sources */,
 				65DD0F581F9F25D200CC665A /* APIResult.swift in Sources */,
