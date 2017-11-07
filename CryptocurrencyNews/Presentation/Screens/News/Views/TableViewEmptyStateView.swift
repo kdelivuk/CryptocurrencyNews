@@ -17,10 +17,13 @@ enum TableViewEmptyStateViewState {
 
 class TableViewEmptyStateView: UIView {
     
+    
     private let titleLabel: UILabel
+    private let imageView: UIImageView
     
     override init(frame: CGRect) {
         self.titleLabel = UILabel()
+        self.imageView = UIImageView()
         super.init(frame: frame)
         
         configureView()
@@ -31,12 +34,37 @@ class TableViewEmptyStateView: UIView {
     }
     
     private func configureView() {
+        
+        imageView.contentMode = .scaleAspectFill
+        
+        titleLabel.font = Fonts.regular(size: 18)
         titleLabel.numberOfLines = 1
         titleLabel.textAlignment = .center
         
-        addSubview(titleLabel)
+        let topView = UIView()
+        let bottomView = UIView()
         
-        titleLabel.snp.makeConstraints { (make) in
+        let spacingView = UIView()
+        
+        let stackView = UIStackView(arrangedSubviews: [topView, imageView, spacingView, titleLabel, bottomView])
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        
+        addSubview(stackView)
+        
+        imageView.snp.makeConstraints { (make) in
+            make.width.equalTo(64)
+        }
+        
+        spacingView.snp.makeConstraints { (make) in
+            make.height.equalTo(15)
+        }
+        
+        topView.snp.makeConstraints { (make) in
+            make.height.equalTo(bottomView)
+        }
+        
+        stackView.snp.makeConstraints { (make) in
             make.edges.equalTo(0)
         }
     }
@@ -44,10 +72,13 @@ class TableViewEmptyStateView: UIView {
     func configure(for state: TableViewEmptyStateViewState) {
         switch state {
         case .noInternetConnection:
+            imageView.image = nil
             titleLabel.text = "No internet connection"
         case .error:
+            imageView.image = nil
             titleLabel.text = "Server error"
         case .noSearchResults:
+            imageView.image = Images.iconSearch
             titleLabel.text = "No search results"
         }
     }
