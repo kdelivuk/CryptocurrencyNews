@@ -54,46 +54,69 @@ class NewsVC: UIViewController {
     private func bindViewModel() {
         viewModel
             .stateObservable
-            .subscribe(onNext: { [weak self] (viewModelState) in
+            .subscribe(onNext: { [weak self] viewModelState in
                 guard let weakself = self else { return }
-                print("state")
+                print("current state: \(viewModelState)")
                 switch viewModelState {
                 case .top:
-                    //                weakself.loaderVC?.stopAnimating()
-                    //                weakself.loaderVC?.removeFromParentViewController()
-                    //                weakself.loaderVC = nil
+                    
+                    if let loaderVC = weakself.loaderVC {
+                        loaderVC.stopAnimating()
+                        loaderVC.removeChildVCFromParentViewController()
+                        weakself.loaderVC = nil
+                    }
+                    
                     weakself.mainView.tableView.backgroundView = nil
                     // reload signal
                     weakself.refreshControl.endRefreshing()
                     weakself.mainView.tableView.reloadData()
+                    
                 case .search(let searchState):
                     switch searchState {
                     case .empty:
-                        //                    weakself.loaderVC?.stopAnimating()
-                        //                    weakself.loaderVC?.removeFromParentViewController()
-                        //                    weakself.loaderVC = nil
+                        
+                        if let loaderVC = weakself.loaderVC {
+                            loaderVC.stopAnimating()
+                            loaderVC.removeChildVCFromParentViewController()
+                            weakself.loaderVC = nil
+                        }
+                        
                         weakself.mainView.tableView.backgroundView = weakself.emptyStateView
                         weakself.emptyStateView.configure(for: .noSearchResults)
                         // reload signal
                         weakself.refreshControl.endRefreshing()
                         weakself.mainView.tableView.reloadData()
-                    case .searching: ()
-                        //                    weakself.loaderVC = FullScreenLoaderVC()
-                        //                    weakself.attachChildVC(weakself.loaderVC!)
-                        //                    weakself.loaderVC?.view.snp.makeConstraints({ (make) in
-                        //                        make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
-                        //                        make.left.right.equalTo(0)
-                        //                        make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
-                    //                    })
-                    case .results(let results):
-                        //                    weakself.loaderVC?.stopAnimating()
-                        //                    weakself.loaderVC?.removeFromParentViewController()
-                        //                    weakself.loaderVC = nil
+                    case .searching:
+                        
+                        // removing background view from tableview subview
+                        weakself.mainView.tableView.backgroundView = nil
+                        
+                        // initializing loader viewcontroller
+                        weakself.loaderVC = FullScreenLoaderVC()
+                        guard let loaderVC = weakself.loaderVC else { return }
+                        
+                        // adding loader viewcontroller to subview as child
+                        weakself.attachChildVC(loaderVC)
+                        loaderVC.view.snp.makeConstraints({ (make) in
+                            make.top.equalTo(weakself.mainView.searchBar.snp.bottom)
+                            make.left.right.equalTo(0)
+                            make.bottom.equalTo(-(weakself.keyboardHeight ?? 0))
+                        })
+                        
+                        
+                    case .results:
+                        
+                        if let loaderVC = weakself.loaderVC {
+                            loaderVC.stopAnimating()
+                            loaderVC.removeChildVCFromParentViewController()
+                            weakself.loaderVC = nil
+                        }
+                        
                         weakself.mainView.tableView.backgroundView = nil
                         // reload signal
                         weakself.refreshControl.endRefreshing()
                         weakself.mainView.tableView.reloadData()
-                    case .error(let error):
+                    case .error:
                         // reload signal
                         weakself.refreshControl.endRefreshing()
                         weakself.mainView.tableView.reloadData()
@@ -200,7 +223,11 @@ extension NewsVC: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // clearing the results
         viewModel.clear()
+        mainView.tableView.reloadData()
+        
+        // searching for filtered results
         viewModel.search(word: searchText)
     }
 }
