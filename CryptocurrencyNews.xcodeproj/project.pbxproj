@@ -588,7 +588,6 @@
 				650120DC1F9DCA1200537214 /* Frameworks */,
 				650120DD1F9DCA1200537214 /* Resources */,
 				F933D39AF8110FCA37B0CC50 /* [CP] Embed Pods Frameworks */,
-				34F57615E712677F97133D9E /* [CP] Copy Pods Resources */,
 				65DD0F4C1F9F253E00CC665A /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -629,7 +628,6 @@
 				65CEE45A1FB1019E004A0B81 /* Frameworks */,
 				65CEE45B1FB1019E004A0B81 /* Resources */,
 				7BB56BDB9604F22C1C710683 /* [CP] Embed Pods Frameworks */,
-				05EAEA4D2E8140576C7D0623 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -650,7 +648,6 @@
 				65DD0F3C1F9F253E00CC665A /* Frameworks */,
 				65DD0F3D1F9F253E00CC665A /* Headers */,
 				65DD0F3E1F9F253E00CC665A /* Resources */,
-				9323E223E6589C0A62B84F75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -670,7 +667,6 @@
 				65E531F51FB0FADF0054458F /* Frameworks */,
 				65E531F61FB0FADF0054458F /* Resources */,
 				D75DA55AA41A3E207918D603 /* [CP] Embed Pods Frameworks */,
-				C8F1BEE437C7C8C60ACBAA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -785,36 +781,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05EAEA4D2E8140576C7D0623 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34F57615E712677F97133D9E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		45109055D865F2C9042CF9FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -857,11 +823,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/../../shake-ios/Shake.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -870,26 +837,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9323E223E6589C0A62B84F75 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-API/Pods-CryptocurrencyNews-API-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5B11E83DFA03AF0F56EE1DF /* [CP] Check Pods Manifest.lock */ = {
@@ -910,32 +863,18 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C8F1BEE437C7C8C60ACBAA2C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D75DA55AA41A3E207918D603 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/../../shake-ios/Shake.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -944,11 +883,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE144322276D874AA9F54D67 /* [CP] Check Pods Manifest.lock */ = {
@@ -975,11 +915,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/../../shake-ios/Shake.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -988,11 +929,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shake.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1237,7 +1179,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6UL4L5EFF2;
+				DEVELOPMENT_TEAM = Y8Z27FN9Z7;
 				INFOPLIST_FILE = CryptocurrencyNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1255,7 +1197,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6UL4L5EFF2;
+				DEVELOPMENT_TEAM = Y8Z27FN9Z7;
 				INFOPLIST_FILE = CryptocurrencyNews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -11,6 +11,7 @@ target 'CryptocurrencyNews' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxBlocking'
+  pod 'Shake', :path => '/Users/kristijandelivuk/shake-ios'
   
   target 'API' do
       use_frameworks!

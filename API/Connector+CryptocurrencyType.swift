@@ -28,7 +28,7 @@ extension Connector: CryptocurrencyType {
                             return
                         }
                         
-                        let cryptocurrencies = cryptocurrencyResponseDict.flatMap({Cryptocurrency(jsonDict: $0, currency: currency)})
+                        let cryptocurrencies = cryptocurrencyResponseDict.compactMap({Cryptocurrency(jsonDict: $0, currency: currency)})
                             
                         observer.onNext(APIResult.success(cryptocurrencies))
                         observer.onCompleted()
