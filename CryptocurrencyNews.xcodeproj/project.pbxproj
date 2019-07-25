@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C6A8AFA75F402FC7BB66D1F /* Pods_CryptocurrencyNews_APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008FEE54BA85E95153740614 /* Pods_CryptocurrencyNews_APITests.framework */; };
+		4804C019E87C00FFFAAE5F1E /* Pods_CryptocurrencyNews_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A587A376D2C62EA2449770AB /* Pods_CryptocurrencyNews_API.framework */; };
 		650120E31F9DCA1200537214 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650120E21F9DCA1200537214 /* AppDelegate.swift */; };
 		650120EA1F9DCA1200537214 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650120E91F9DCA1200537214 /* Assets.xcassets */; };
 		650120ED1F9DCA1200537214 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650120EB1F9DCA1200537214 /* LaunchScreen.storyboard */; };
@@ -74,10 +76,8 @@
 		65DD0F5C1F9F306F00CC665A /* NewsVMMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD0F5B1F9F306F00CC665A /* NewsVMMock.swift */; };
 		65E531FB1FB0FADF0054458F /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E531FA1FB0FADF0054458F /* APITests.swift */; };
 		65E531FD1FB0FADF0054458F /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65DD0F401F9F253E00CC665A /* API.framework */; };
-		6C380BC4903B60ED3D52A17A /* Pods_CryptocurrencyNews_APITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFDCE8E08EB1A4EB68348C2 /* Pods_CryptocurrencyNews_APITests.framework */; };
-		B38072ADA15D7A4A7C29FB77 /* Pods_CryptocurrencyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */; };
-		DB6E280F301BA0A06877701E /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C1D3E8392369A2D2150034 /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */; };
-		F397BCBEDD25CAB8CA980308 /* Pods_CryptocurrencyNews_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C971519F8FE212BC10DB662D /* Pods_CryptocurrencyNews_API.framework */; };
+		F804F65CA51530F51CDB510D /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61496B8500AC938A5AFE4B2C /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */; };
+		FDFF0842C9D75EDC7BF28654 /* Pods_CryptocurrencyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D580A72306060845A2AD9C9 /* Pods_CryptocurrencyNews.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,10 +127,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		09357769FD9D918E62893E3C /* Pods-CryptocurrencyNews-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-API.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-API/Pods-CryptocurrencyNews-API.debug.xcconfig"; sourceTree = "<group>"; };
-		354ECF340ACBD4F85CA527D6 /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-APITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests.debug.xcconfig"; sourceTree = "<group>"; };
-		36CF8F586E13582B910CED77 /* Pods-CryptocurrencyNews-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-API.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-API/Pods-CryptocurrencyNews-API.release.xcconfig"; sourceTree = "<group>"; };
-		5FED03205D01D5CB3731F2E4 /* Pods-CryptocurrencyNews-APITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-APITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests.release.xcconfig"; sourceTree = "<group>"; };
+		008FEE54BA85E95153740614 /* Pods_CryptocurrencyNews_APITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_APITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35A335332CA006F4B1EC9AD5 /* Pods-CryptocurrencyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.release.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.release.xcconfig"; sourceTree = "<group>"; };
+		38E953DB15DD56BF961C1667 /* Pods-CryptocurrencyNews-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-API.release.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-API/Pods-CryptocurrencyNews-API.release.xcconfig"; sourceTree = "<group>"; };
+		4D580A72306060845A2AD9C9 /* Pods_CryptocurrencyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61496B8500AC938A5AFE4B2C /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		650120DF1F9DCA1200537214 /* CryptocurrencyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptocurrencyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		650120E21F9DCA1200537214 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		650120E91F9DCA1200537214 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -203,14 +204,13 @@
 		65E531F81FB0FADF0054458F /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E531FA1FB0FADF0054458F /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		65E531FC1FB0FADF0054458F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B3904F1642264D338E38279 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig"; sourceTree = "<group>"; };
-		73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.release.xcconfig"; sourceTree = "<group>"; };
-		7F266A0277D8DA8A9AD3CD23 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C971519F8FE212BC10DB662D /* Pods_CryptocurrencyNews_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFDCE8E08EB1A4EB68348C2 /* Pods_CryptocurrencyNews_APITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_APITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4C1D3E8392369A2D2150034 /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.debug.xcconfig"; sourceTree = "<group>"; };
+		6A1181B324BF9BAD4795D83F /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-APITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FAD7578AA51A1DFFC345A07 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		826912FCA0FEA2192A43C148 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		88FBB59F4E5B3260435EFB61 /* Pods-CryptocurrencyNews-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-API.debug.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-API/Pods-CryptocurrencyNews-API.debug.xcconfig"; sourceTree = "<group>"; };
+		A587A376D2C62EA2449770AB /* Pods_CryptocurrencyNews_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptocurrencyNews_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C3574AC7089F647970821C /* Pods-CryptocurrencyNews-APITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews-APITests.release.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests.release.xcconfig"; sourceTree = "<group>"; };
+		E5E7569566522A580633148E /* Pods-CryptocurrencyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptocurrencyNews.debug.xcconfig"; path = "Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,8 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				650A5BE71FA91A030091A98C /* Defines.framework in Frameworks */,
-				B38072ADA15D7A4A7C29FB77 /* Pods_CryptocurrencyNews.framework in Frameworks */,
 				65DD0F471F9F253E00CC665A /* API.framework in Frameworks */,
+				FDFF0842C9D75EDC7BF28654 /* Pods_CryptocurrencyNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB6E280F301BA0A06877701E /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework in Frameworks */,
+				F804F65CA51530F51CDB510D /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F397BCBEDD25CAB8CA980308 /* Pods_CryptocurrencyNews_API.framework in Frameworks */,
+				4804C019E87C00FFFAAE5F1E /* Pods_CryptocurrencyNews_API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +252,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E531FD1FB0FADF0054458F /* API.framework in Frameworks */,
-				6C380BC4903B60ED3D52A17A /* Pods_CryptocurrencyNews_APITests.framework in Frameworks */,
+				3C6A8AFA75F402FC7BB66D1F /* Pods_CryptocurrencyNews_APITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		227E0EC80F53A34749083267 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5E7569566522A580633148E /* Pods-CryptocurrencyNews.debug.xcconfig */,
+				35A335332CA006F4B1EC9AD5 /* Pods-CryptocurrencyNews.release.xcconfig */,
+				88FBB59F4E5B3260435EFB61 /* Pods-CryptocurrencyNews-API.debug.xcconfig */,
+				38E953DB15DD56BF961C1667 /* Pods-CryptocurrencyNews-API.release.xcconfig */,
+				6A1181B324BF9BAD4795D83F /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */,
+				A5C3574AC7089F647970821C /* Pods-CryptocurrencyNews-APITests.release.xcconfig */,
+				7FAD7578AA51A1DFFC345A07 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */,
+				826912FCA0FEA2192A43C148 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		56F31FABAB1D571CC65E0967 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D580A72306060845A2AD9C9 /* Pods_CryptocurrencyNews.framework */,
+				A587A376D2C62EA2449770AB /* Pods_CryptocurrencyNews_API.framework */,
+				008FEE54BA85E95153740614 /* Pods_CryptocurrencyNews_APITests.framework */,
+				61496B8500AC938A5AFE4B2C /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		650120D61F9DCA1200537214 = {
 			isa = PBXGroup;
 			children = (
@@ -268,8 +295,8 @@
 				65E531F91FB0FADF0054458F /* APITests */,
 				65CEE45E1FB1019E004A0B81 /* CryptocurrencyNewsTests */,
 				650120E01F9DCA1200537214 /* Products */,
-				965376DD7F2C367537D9FEA6 /* Pods */,
-				A1951FE77E4D2CABE89FC668 /* Frameworks */,
+				227E0EC80F53A34749083267 /* Pods */,
+				56F31FABAB1D571CC65E0967 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -531,32 +558,6 @@
 			path = APITests;
 			sourceTree = "<group>";
 		};
-		965376DD7F2C367537D9FEA6 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */,
-				73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */,
-				09357769FD9D918E62893E3C /* Pods-CryptocurrencyNews-API.debug.xcconfig */,
-				36CF8F586E13582B910CED77 /* Pods-CryptocurrencyNews-API.release.xcconfig */,
-				354ECF340ACBD4F85CA527D6 /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */,
-				5FED03205D01D5CB3731F2E4 /* Pods-CryptocurrencyNews-APITests.release.xcconfig */,
-				7F266A0277D8DA8A9AD3CD23 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */,
-				6B3904F1642264D338E38279 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		A1951FE77E4D2CABE89FC668 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C3FD0AD5C10F1F52E9DD5623 /* Pods_CryptocurrencyNews.framework */,
-				C971519F8FE212BC10DB662D /* Pods_CryptocurrencyNews_API.framework */,
-				CCFDCE8E08EB1A4EB68348C2 /* Pods_CryptocurrencyNews_APITests.framework */,
-				D4C1D3E8392369A2D2150034 /* Pods_CryptocurrencyNews_CryptocurrencyNewsTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -583,12 +584,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 650120F11F9DCA1200537214 /* Build configuration list for PBXNativeTarget "CryptocurrencyNews" */;
 			buildPhases = (
-				DE144322276D874AA9F54D67 /* [CP] Check Pods Manifest.lock */,
+				2485D82106BED24FECB59E5B /* [CP] Check Pods Manifest.lock */,
 				650120DB1F9DCA1200537214 /* Sources */,
 				650120DC1F9DCA1200537214 /* Frameworks */,
 				650120DD1F9DCA1200537214 /* Resources */,
-				F933D39AF8110FCA37B0CC50 /* [CP] Embed Pods Frameworks */,
 				65DD0F4C1F9F253E00CC665A /* Embed Frameworks */,
+				749157409C1C4B7F6BBA04F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -623,11 +624,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65CEE4661FB1019E004A0B81 /* Build configuration list for PBXNativeTarget "CryptocurrencyNewsTests" */;
 			buildPhases = (
-				C5B11E83DFA03AF0F56EE1DF /* [CP] Check Pods Manifest.lock */,
+				9156C4E543809FF5F3051F88 /* [CP] Check Pods Manifest.lock */,
 				65CEE4591FB1019E004A0B81 /* Sources */,
 				65CEE45A1FB1019E004A0B81 /* Frameworks */,
 				65CEE45B1FB1019E004A0B81 /* Resources */,
-				7BB56BDB9604F22C1C710683 /* [CP] Embed Pods Frameworks */,
+				433C4563B9E6BF22B9480E1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -643,7 +644,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65DD0F4B1F9F253E00CC665A /* Build configuration list for PBXNativeTarget "API" */;
 			buildPhases = (
-				45109055D865F2C9042CF9FF /* [CP] Check Pods Manifest.lock */,
+				04DFB4D64396E81851C4FA3C /* [CP] Check Pods Manifest.lock */,
 				65DD0F3B1F9F253E00CC665A /* Sources */,
 				65DD0F3C1F9F253E00CC665A /* Frameworks */,
 				65DD0F3D1F9F253E00CC665A /* Headers */,
@@ -662,11 +663,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65E532021FB0FAE00054458F /* Build configuration list for PBXNativeTarget "APITests" */;
 			buildPhases = (
-				732A5DC02977A281D4366593 /* [CP] Check Pods Manifest.lock */,
+				1994271097C2F9A3234AC21F /* [CP] Check Pods Manifest.lock */,
 				65E531F41FB0FADF0054458F /* Sources */,
 				65E531F51FB0FADF0054458F /* Frameworks */,
 				65E531F61FB0FADF0054458F /* Resources */,
-				D75DA55AA41A3E207918D603 /* [CP] Embed Pods Frameworks */,
+				FB1B09E847AB3E4ABC11D398 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -781,16 +782,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		45109055D865F2C9042CF9FF /* [CP] Check Pods Manifest.lock */ = {
+		04DFB4D64396E81851C4FA3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-API-checkManifestLockResult.txt",
 			);
@@ -799,16 +804,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		732A5DC02977A281D4366593 /* [CP] Check Pods Manifest.lock */ = {
+		1994271097C2F9A3234AC21F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-APITests-checkManifestLockResult.txt",
 			);
@@ -817,7 +826,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7BB56BDB9604F22C1C710683 /* [CP] Embed Pods Frameworks */ = {
+		2485D82106BED24FECB59E5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		433C4563B9E6BF22B9480E1E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -845,71 +876,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-CryptocurrencyNewsTests/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5B11E83DFA03AF0F56EE1DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D75DA55AA41A3E207918D603 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${PODS_ROOT}/../../shake-ios/Shake.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shake.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE144322276D874AA9F54D67 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F933D39AF8110FCA37B0CC50 /* [CP] Embed Pods Frameworks */ = {
+		749157409C1C4B7F6BBA04F5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -935,6 +902,56 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews/Pods-CryptocurrencyNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9156C4E543809FF5F3051F88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptocurrencyNews-CryptocurrencyNewsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB1B09E847AB3E4ABC11D398 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${PODS_ROOT}/../../shake-ios/Shake.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shake.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptocurrencyNews-APITests/Pods-CryptocurrencyNews-APITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1174,7 +1191,7 @@
 		};
 		650120F21F9DCA1200537214 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0B01F90C64BBAFB90DF5C52 /* Pods-CryptocurrencyNews.debug.xcconfig */;
+			baseConfigurationReference = E5E7569566522A580633148E /* Pods-CryptocurrencyNews.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1192,7 +1209,7 @@
 		};
 		650120F31F9DCA1200537214 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73330043857EE623A8A74A0F /* Pods-CryptocurrencyNews.release.xcconfig */;
+			baseConfigurationReference = 35A335332CA006F4B1EC9AD5 /* Pods-CryptocurrencyNews.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1263,7 +1280,7 @@
 		};
 		65CEE4641FB1019E004A0B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F266A0277D8DA8A9AD3CD23 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */;
+			baseConfigurationReference = 7FAD7578AA51A1DFFC345A07 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1281,7 +1298,7 @@
 		};
 		65CEE4651FB1019E004A0B81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B3904F1642264D338E38279 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */;
+			baseConfigurationReference = 826912FCA0FEA2192A43C148 /* Pods-CryptocurrencyNews-CryptocurrencyNewsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1299,7 +1316,7 @@
 		};
 		65DD0F491F9F253E00CC665A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09357769FD9D918E62893E3C /* Pods-CryptocurrencyNews-API.debug.xcconfig */;
+			baseConfigurationReference = 88FBB59F4E5B3260435EFB61 /* Pods-CryptocurrencyNews-API.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1326,7 +1343,7 @@
 		};
 		65DD0F4A1F9F253E00CC665A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36CF8F586E13582B910CED77 /* Pods-CryptocurrencyNews-API.release.xcconfig */;
+			baseConfigurationReference = 38E953DB15DD56BF961C1667 /* Pods-CryptocurrencyNews-API.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -1352,7 +1369,7 @@
 		};
 		65E532001FB0FADF0054458F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 354ECF340ACBD4F85CA527D6 /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */;
+			baseConfigurationReference = 6A1181B324BF9BAD4795D83F /* Pods-CryptocurrencyNews-APITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UL4L5EFF2;
@@ -1368,7 +1385,7 @@
 		};
 		65E532011FB0FADF0054458F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FED03205D01D5CB3731F2E4 /* Pods-CryptocurrencyNews-APITests.release.xcconfig */;
+			baseConfigurationReference = A5C3574AC7089F647970821C /* Pods-CryptocurrencyNews-APITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6UL4L5EFF2;

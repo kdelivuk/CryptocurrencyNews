@@ -37,5 +37,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Shake</key>
+	<dict>
+		<key>APIClientID</key>
+		<string>L7HXUshddBDrY6Lnj2KLeUwq1myGYeaqosNxSz9o</string>
+		<key>APIClientSecret</key>
+		<string>2C0t93KFNkOYFrUXY8oLoRz38RkPdEo3hptaGTVqZ6dBTZUy2KZIwbn</string>
+	</dict>
 </dict>
 </plist>
